@@ -2,7 +2,7 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Your Name</title>
+  <title>Yash Mishra</title>
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="styles.css"/>
 </head>
@@ -10,23 +10,21 @@
 
   <!-- HEADER -->
   <div id="header">
-    <div id="site-title">yashmishra<span>neocities</span>.org</div>
-    <div id="nav-icons">
-      ★ &nbsp; ✦ &nbsp; ◆ &nbsp; ✦ &nbsp; ★
-    </div>
+    <div id="site-title">yashmishra<span>.neocities</span>.org</div>
+    <div id="nav-icons">★ &nbsp; ✦ &nbsp; ◆ &nbsp; ✦ &nbsp; ★</div>
   </div>
 
   <!-- TOP NAV BAR -->
   <div id="topnav">
-    <a href="#">home</a>
-    <a href="#">about</a>
-    <a href="#">interests</a>
-    <a href="#">contact</a>
-    <a href="#">guestbook</a>
+    <a href="#home">home</a>
+    <a href="#about">about</a>
+    <a href="#projects">projects</a>
+    <a href="#interests">interests</a>
+    <a href="#contact">contact</a>
   </div>
 
   <!-- MAIN 3-COLUMN LAYOUT -->
-  <div id="wrapper">
+  <div id="wrapper" id="home">
 
     <!-- LEFT SIDEBAR -->
     <div class="sidebar" id="left-sidebar">
@@ -34,23 +32,21 @@
       <div class="box">
         <div class="box-title">⚙ navigate</div>
         <ul>
-          <li>⬥ <a href="#">home</a></li>
-          <li>⬥ <a href="#">about me</a></li>
-          <li>⬥ <a href="#">my projects</a></li>
-          <li>⬥ <a href="#">interests</a></li>
-          <li>⬥ <a href="#">contact</a></li>
+          <li>⬥ <a href="#home">home</a></li>
+          <li>⬥ <a href="#about">about me</a></li>
+          <li>⬥ <a href="#projects">my projects</a></li>
+          <li>⬥ <a href="#interests">interests</a></li>
+          <li>⬥ <a href="#contact">contact</a></li>
         </ul>
       </div>
 
       <div class="box">
         <div class="box-title">◈ status</div>
         <div class="status-inner">
-          <img src="mememe.png" alt="me" class="sidebar-img"/>
+          <img src="dpp.png" alt="me" class="sidebar-img"/>
           <p>currently: <span class="accent">coding ✦</span></p>
           <p>mood: <span class="accent">focused</span></p>
           <p>music: <span class="accent">Snake Eater</span></p>
-
-
           <div id="player">
             <div id="player-screen">
               <div id="player-label">♫ now playing</div>
@@ -68,19 +64,15 @@
               <button onclick="audioSkip()">⏭</button>
             </div>
           </div>
-          <audio id="audio" src="https://archive.org/download/snake-eater-cynthia-harrell/SNAKE EATER - Cynthia Harrell.mp3" 
-          preload="metadata"
-          loop>
-        </audio>
-
+          <audio id="audio" src="https://archive.org/download/snake-eater-cynthia-harrell/SNAKE EATER - Cynthia Harrell.mp3" preload="metadata" loop></audio>
         </div>
       </div>
 
       <div class="box">
         <div class="box-title">✦ elsewhere</div>
         <ul>
-          <li>⬥ <a href="https://github.com">github</a></li>
-          <li>⬥ <a href="https://linkedin.com">linkedin</a></li>
+          <li>⬥ <a href="https://github.com/yashmishra" target="_blank">github</a></li>
+          <li>⬥ <a href="https://linkedin.com/in/yashmishra" target="_blank">linkedin</a></li>
           <li>⬥ <a href="mailto:you@email.com">email me</a></li>
         </ul>
       </div>
@@ -96,7 +88,7 @@
           <div class="welcome-text">
             <p>hello web surfer! welcome to my little corner of the internet.</p>
             <br/>
-            <p>I'm a Computer Science student with a strong interest in building practical, user-focused web applications. I primarily work with React and modern JavaScript to create clean, responsive interfaces, and I have hands-on experience with backend fundamentals like Node.js, MySQL, and REST APIs. I've deployed multiple projects on Vercel with proper documentation and version control, and I've also worked on machine-learning–based projects using CNN architectures such as VGG16. I enjoy learning by building, writing maintainable code, and continuously improving my full-stack development skills.</p>
+            <p>I'm a Computer Science student with a strong interest in building practical, user-focused web applications. I primarily work with React and modern JavaScript to create clean, responsive interfaces, and I have hands-on experience with backend fundamentals like Node.js, MySQL, and REST APIs.</p>
             <br/>
             <p>i hope you enjoy your stay ✦</p>
           </div>
@@ -105,34 +97,38 @@
 
       <div class="divider">· · · ✦ · · · ◆ · · · ✦ · · ·</div>
 
-      <div class="box">
+      <div class="box" id="interests">
         <div class="box-title">★ interests</div>
         <ul class="interests">
-          <li>⬥ <a href="https://developer.mozilla.org">web development</a></li>
+          <li>⬥ <a href="https://developer.mozilla.org" target="_blank">web development</a></li>
           <li>⬥ open source</li>
           <li>⬥ photography</li>
           <li>⬥ coffee &amp; books</li>
         </ul>
       </div>
+      <div class="divider">· · · ✦ · · · ◆ · · · ✦ · · ·</div>
 
       <div class="box">
         <div class="box-title">✉ latest update</div>
         <p class="log-date">02/25/26 —</p>
         <p>just launched this site! still building everything out. check back soon for more pages.</p>
       </div>
+      <div class="divider">· · · ✦ · · · ◆ · · · ✦ · · ·</div>
 
     </div>
 
     <!-- RIGHT SIDEBAR -->
     <div class="sidebar" id="right-sidebar">
 
-      <div class="box">
+      <div class="box" id="about">
         <div class="box-title">◈ about me</div>
         <div class="status-inner">
           <p><span class="accent">name:</span> Yash Mishra</p>
-          <p><span class="accent">role:</span> Web Developer</p>
-          <p><span class="accent">city:</span> Bilaspur</p>
-          <p><span class="accent">lang:</span> Java, JS, Python, PHP ...</p>
+          <p><span class="accent">role:</span> Full Stack Dev</p>
+          <p><span class="accent">city:</span> Bilaspur, CG</p>
+          <p><span class="accent">edu:</span> B.Tech CSE</p>
+          <p><span class="accent">grad:</span> 06/2026</p>
+          <p><span class="accent">lang:</span> Java, JS, Python, PHP</p>
         </div>
       </div>
 
@@ -141,38 +137,131 @@
         <ul>
           <li>⬥ HTML / CSS</li>
           <li>⬥ JavaScript</li>
-          <li>⬥ React</li>
-          <li>⬥ Node.js</li>
-          <li>⬥ MongoDB</li>
-          <li>⬥ SEO</li>
-          <li>⬥ AWS</li>
+          <li>⬥ React / Next.js</li>
+          <li>⬥ Node.js / Express</li>
+          <li>⬥ MongoDB / MySQL</li>
           <li>⬥ Firebase</li>
-          <li>⬥ MySql</li>
-          <li>⬥ Express js</li>
-          <li>⬥ Git</li>
+          <li>⬥ AWS</li>
+          <li>⬥ TailwindCSS</li>
+          <li>⬥ Spring Boot</li>
+          <li>⬥ Git / GitHub</li>
+          <li>⬥ SEO</li>
         </ul>
       </div>
 
       <div class="box">
         <div class="box-title">★ buttons</div>
         <div class="buttons">
-          <div class="site-btn">88x31</div>
-          <div class="site-btn">neocities</div>
-          <div class="site-btn">hand coded</div>
-          <div class="site-btn">dark mode</div>
+          <a class="site-btn" href="https://neocities.org/browse" target="_blank">neocities</a>
+          <a class="site-btn" href="https://github.com/yashmishra11" target="_blank">github</a>
+          <a class="site-btn" href="https://linkedin.com/in/yashmishra" target="_blank">linkedin</a>
+          <a class="site-btn" href="mailto:you@email.com">email me</a>
         </div>
       </div>
 
     </div>
   </div>
 
-  <!-- FOOTER -->
-  <div id="footer">
-    <p>✦ Yash Mishra · hand-coded with ♥ · hosted on neocities ✦</p>
-    <p class="footer-sub">best viewed at 1024px · est. 2025</p>
+  <!-- ===== PROJECTS SECTION ===== -->
+  <div id="projects" class="full-section">
+    <div class="section-header">◆ my projects</div>
+    <div class="projects-grid">
+
+      <div class="project-card">
+        <div class="project-title">⬥ Anime API Website</div>
+        <div class="project-date">08/2024 – 09/2024</div>
+        <p>Responsive anime info platform using React.js and public REST APIs. Modular component architecture with React Hooks for state management and async API handling. Deployed on Vercel.</p>
+        <div class="project-tags">
+          <span>React.js</span><span>REST API</span><span>Hooks</span><span>Vercel</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-title">⬥ Pokedex</div>
+        <div class="project-date">09/2024 – 11/2024</div>
+        <p>Dynamic Pokédex app integrating the Jikan REST API for real-time Pokémon data. Reusable UI components, responsive design, cross-browser compatibility.</p>
+        <div class="project-tags">
+          <span>React.js</span><span>Jikan API</span><span>Hooks</span><span>Responsive</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-title">⬥ CMS – SECL</div>
+        <div class="project-date">05/2025 – 06/2025</div>
+        <p>PHP-based Complaint Monitoring System with MVC architecture. Secure auth, role-based access control, optimized SQL queries, and end-to-end complaint workflow.</p>
+        <div class="project-tags">
+          <span>PHP</span><span>MySQL</span><span>MVC</span><span>Git</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-title">⬥ TodoList – React</div>
+        <div class="project-date">01/2026 – 02/2026</div>
+        <p>Full-stack Todo app with React, Vite &amp; Firebase. User auth, real-time Firestore sync, glassmorphism dark UI, smooth animations. Uses React Context and useReducer.</p>
+        <div class="project-tags">
+          <span>React</span><span>Firebase</span><span>Vite</span><span>Firestore</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-title">⬥ Blog-Mongo</div>
+        <div class="project-date">02/2026 – 02/2026</div>
+        <p>Full-stack blog with React, TypeScript &amp; Material UI on the frontend; Node.js, Express &amp; MongoDB on the backend. Dynamic post fetching, post creation, multi-page layout.</p>
+        <div class="project-tags">
+          <span>React</span><span>TypeScript</span><span>MongoDB</span><span>Express</span>
+        </div>
+      </div>
+
+    </div>
+      <div class="divider">· · · ✦ · · · ◆ · · · ✦ · · ·</div>
+    
   </div>
 
+  <!-- ===== CONTACT SECTION ===== -->
+  <div id="contact" class="full-section">
+    <div class="section-header">✉ contact me</div>
+    <div class="contact-grid">
 
+      <div class="contact-card">
+        <div class="contact-label">◈ email</div>
+        <a href="mailto:you@email.com">you@email.com</a>
+      </div>
+
+      <div class="contact-card">
+        <div class="contact-label">◈ phone</div>
+        <span>+91 8827895934</span>
+      </div>
+
+      <div class="contact-card">
+        <div class="contact-label">◈ github</div>
+        <a href="https://github.com/yashmishra11" target="_blank">github.com/yashmishra</a>
+      </div>
+
+      <div class="contact-card">
+        <div class="contact-label">◈ linkedin</div>
+        <a href="https://linkedin.com/in/yashmishra" target="_blank">linkedin.com/in/yashmishra</a>
+      </div>
+
+      <div class="contact-card">
+        <div class="contact-label">◈ location</div>
+        <span>Bilaspur, Chhattisgarh 🇮🇳</span>
+      </div>
+
+      <div class="contact-card">
+        <div class="contact-label">◈ resume</div>
+        <a href="Yash_Mishra.pdf" target="_blank">download cv ↓</a>
+      </div>
+
+    </div>
+          <div class="divider">· · · ✦ · · · ◆ · · · ✦ · · ·</div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <div id="footer">
+    <p>✦ Yash Mishra · made with ♥ · hosted on neocities ✦</p>
+    <p class="footer-sub">best viewed at 1024px · est. 2025</p>
+  </div>
 
   <script>
     const audio = document.getElementById('audio');
@@ -187,23 +276,18 @@
       const sec = Math.floor(s % 60);
       return m + ':' + (sec < 10 ? '0' : '') + sec;
     }
-    audio.addEventListener('loadedmetadata', () => {
-      durationEl.textContent = fmt(audio.duration);
-    });
+    audio.addEventListener('loadedmetadata', () => { durationEl.textContent = fmt(audio.duration); });
     audio.addEventListener('timeupdate', () => {
       currentTimeEl.textContent = fmt(audio.currentTime);
       const pct = audio.duration ? (audio.currentTime / audio.duration) * 100 : 0;
       fill.style.width = pct + '%';
     });
-    // loop attribute handles repeat automatically
-
     function togglePlay() {
       if (audio.paused) { audio.play(); playBtn.textContent = '⏸'; }
       else { audio.pause(); playBtn.textContent = '▶'; }
     }
     function audioRestart() { audio.currentTime = 0; audio.play(); playBtn.textContent = '⏸'; }
     function audioSkip() { audio.currentTime = Math.min(audio.currentTime + 10, audio.duration); }
-
     document.getElementById('progress-bar').addEventListener('click', function(e) {
       const rect = this.getBoundingClientRect();
       audio.currentTime = ((e.clientX - rect.left) / rect.width) * audio.duration;

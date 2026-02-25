@@ -68,10 +68,7 @@
               <button onclick="audioSkip()">⏭</button>
             </div>
           </div>
-          <audio id="audio" src="https://archive.org/download/snake-eater-cynthia-harrell/SNAKE EATER - Cynthia Harrell.mp3" 
-          preload="metadata"
-          loop>
-        </audio>
+          <audio id="audio" src="https://on.soundcloud.com/8pctfaLVZykBkPkoOd"></audio>
 
         </div>
       </div>
@@ -173,41 +170,5 @@
   </div>
 
 
-
-  <script>
-    const audio = document.getElementById('audio');
-    const playBtn = document.getElementById('play-btn');
-    const fill = document.getElementById('progress-fill');
-    const currentTimeEl = document.getElementById('current-time');
-    const durationEl = document.getElementById('duration');
-
-    function fmt(s) {
-      if (isNaN(s)) return '0:00';
-      const m = Math.floor(s / 60);
-      const sec = Math.floor(s % 60);
-      return m + ':' + (sec < 10 ? '0' : '') + sec;
-    }
-    audio.addEventListener('loadedmetadata', () => {
-      durationEl.textContent = fmt(audio.duration);
-    });
-    audio.addEventListener('timeupdate', () => {
-      currentTimeEl.textContent = fmt(audio.currentTime);
-      const pct = audio.duration ? (audio.currentTime / audio.duration) * 100 : 0;
-      fill.style.width = pct + '%';
-    });
-    // loop attribute handles repeat automatically
-
-    function togglePlay() {
-      if (audio.paused) { audio.play(); playBtn.textContent = '⏸'; }
-      else { audio.pause(); playBtn.textContent = '▶'; }
-    }
-    function audioRestart() { audio.currentTime = 0; audio.play(); playBtn.textContent = '⏸'; }
-    function audioSkip() { audio.currentTime = Math.min(audio.currentTime + 10, audio.duration); }
-
-    document.getElementById('progress-bar').addEventListener('click', function(e) {
-      const rect = this.getBoundingClientRect();
-      audio.currentTime = ((e.clientX - rect.left) / rect.width) * audio.duration;
-    });
-  </script>
 </body>
 </html>

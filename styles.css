@@ -27,7 +27,6 @@ body {
   font-size: 18px;
   line-height: 1.6;
   min-height: 100vh;
-  zoom: 2;
 }
 
 /* ===== HEADER ===== */
@@ -250,3 +249,172 @@ ul.interests li:last-child { border-bottom: none; }
     gap: 10px;
   }
 }
+
+/* ===== PIXEL MUSIC PLAYER ===== */
+#player {
+  border-top: 1px solid var(--border);
+  background: #0c0c14;
+  padding: 8px;
+  font-family: 'Press Start 2P', monospace;
+}
+
+#player-screen {
+  background: #0a1a1a;
+  border: 2px solid var(--accent);
+  padding: 6px 8px;
+  margin-bottom: 6px;
+  box-shadow: inset 0 0 8px rgba(126,184,200,0.15);
+}
+
+#player-label {
+  font-size: 0.28rem;
+  color: var(--muted);
+  letter-spacing: 0.1em;
+  margin-bottom: 3px;
+}
+
+#player-title {
+  font-size: 0.42rem;
+  color: var(--accent);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 1px;
+  text-shadow: 0 0 6px var(--accent);
+}
+
+#player-artist {
+  font-size: 0.35rem;
+  color: var(--muted);
+  margin-bottom: 5px;
+}
+
+#player-time {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.3rem;
+  color: var(--muted);
+}
+
+#progress-bar {
+  flex: 1;
+  height: 4px;
+  background: var(--border);
+  cursor: pointer;
+  position: relative;
+}
+
+#progress-fill {
+  height: 100%;
+  width: 0%;
+  background: var(--accent);
+  transition: width 0.5s linear;
+  box-shadow: 0 0 4px var(--accent);
+}
+
+#player-controls {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.ctrl-btn {
+  background: var(--bg3);
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  font-size: 0.65rem;
+  width: 32px;
+  height: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.1s, color 0.1s;
+  font-family: inherit;
+  padding: 0;
+}
+
+.ctrl-btn:hover {
+  background: var(--accent);
+  color: #000;
+}
+
+#btn-play {
+  width: 40px;
+}
+
+/* ===== MUSIC PLAYER ===== */
+#player {
+  margin-top: 10px;
+  border: 1px solid var(--accent);
+  background: #050510;
+  font-family: 'Press Start 2P', monospace;
+  overflow: hidden;
+}
+#player-screen {
+  background: #0a1a2a;
+  border-bottom: 1px solid var(--accent);
+  padding: 6px 8px;
+}
+#player-label {
+  font-size: 0.28rem;
+  color: var(--accent);
+  opacity: 0.6;
+  letter-spacing: 0.1em;
+  margin-bottom: 4px;
+}
+#player-title {
+  font-size: 0.38rem;
+  color: var(--title-fg);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 2px;
+}
+#player-artist {
+  font-size: 0.3rem;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+#player-time {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.28rem;
+  color: var(--accent);
+}
+#progress-bar {
+  flex: 1;
+  height: 4px;
+  background: var(--border);
+  cursor: pointer;
+}
+#progress-fill {
+  height: 100%;
+  width: 0%;
+  background: var(--accent);
+  transition: width 0.5s linear;
+}
+#player-controls {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  padding: 6px;
+}
+#player-controls button {
+  background: none;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  font-family: 'VT323', monospace;
+  font-size: 1rem;
+  width: 28px;
+  height: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.1s, color 0.1s;
+  line-height: 1;
+}
+#player-controls button:hover { background: var(--accent); color: #000; }

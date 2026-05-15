@@ -1,4 +1,4 @@
-# yashmishra.xyz
+## yashmishra.xyz
 
 My personal website — hand-coded and hosted on [Neocities](https://neocities.org).
 

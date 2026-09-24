@@ -7,13 +7,11 @@
   <meta name="description" content="Personal retro-indie corner of Yash Mishra — Full-stack developer, CS student, and retro web enthusiast. Handcrafted for Neocities."/>
   <meta name="theme-color" content="#0a0a0f"/>
 
-  <!-- Open Graph / Meta -->
   <meta property="og:title" content="Yash Mishra ✦ Indie Web & Full Stack Dev"/>
   <meta property="og:description" content="Handcrafted retro Neocities personal website with projects, devlogs, chiptune player, and guestbook."/>
   <meta property="og:image" content="dpp.png"/>
   <meta property="og:url" content="https://yashmishra.neocities.org"/>
 
-  <!-- Retro Pixel Favicon (Inline SVG Data URI) -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%237eb8c8' d='M8 0h1v3H8zm0 13h1v3H8zM0 8h3v1H0zm13 0h3v1h-3zM2 2h3v2H2zm9 9h3v2h-3zM11 2h3v3h-2V3h-1zM2 11h3v3H3v-2H2zm4-5h4v4H6z'/%3E%3Cpath fill='%23c8a97e' d='M7 7h2v2H7z'/%3E%3C/svg%3E"/>
 
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
@@ -23,10 +21,8 @@
 </head>
 <body>
 
-  <!-- CRT SCANLINE & PHOSPHOR OVERLAY -->
   <div id="crt-overlay" aria-hidden="true"></div>
 
-  <!-- TOP RETRO UTILITY BAR -->
   <div id="utility-bar">
     <div class="utility-left">
       <span class="live-dot" title="Server Status: Online"></span>
@@ -39,7 +35,6 @@
     </div>
   </div>
 
-  <!-- HEADER -->
   <header id="header">
     <div id="site-title">
       <a href="#home">yashmishra<span>.neocities</span>.org</a>
@@ -48,7 +43,6 @@
     <div id="nav-icons" aria-hidden="true">★ &nbsp; ✦ &nbsp; ◆ &nbsp; ✦ &nbsp; ★</div>
   </header>
 
-  <!-- TOP STICKY NAV BAR -->
   <nav id="topnav" aria-label="Main Navigation">
     <a href="#home">✦ home</a>
     <a href="#about">◈ about</a>
@@ -58,16 +52,12 @@
     <a href="#contact">✉ contact</a>
   </nav>
 
-  <!-- HOME ANCHOR TARGET -->
   <div id="home"></div>
 
-  <!-- MAIN 3-COLUMN LAYOUT -->
   <main id="wrapper">
 
-    <!-- ===== LEFT SIDEBAR ===== -->
     <aside class="sidebar" id="left-sidebar">
 
-      <!-- Navigation Box -->
       <div class="box">
         <div class="box-title">
           <span>⚙ navigate</span>
@@ -83,7 +73,6 @@
         </ul>
       </div>
 
-      <!-- Status & Profile Box -->
       <div class="box">
         <div class="box-title">◈ status &amp; music</div>
         <div class="status-inner">
@@ -95,7 +84,6 @@
           <p>mood: <span class="accent">nostalgic &amp; focused</span></p>
           <p>playing: <span class="accent" id="status-song-name">Snake Eater</span></p>
 
-          <!-- CLEAN RETRO AUDIO PLAYER -->
           <div id="player">
             <div id="player-screen">
               <div class="player-top-line">
@@ -106,7 +94,6 @@
               <div id="player-title">Snake Eater</div>
               <div id="player-artist">Cynthia Harrell (MGS3)</div>
 
-              <!-- Animated Equalizer Bars -->
               <div id="equalizer" aria-hidden="true">
                 <div class="eq-bar"></div>
                 <div class="eq-bar"></div>
@@ -117,7 +104,6 @@
                 <div class="eq-bar"></div>
               </div>
 
-              <!-- Time & Seek Bar -->
               <div id="player-time">
                 <span id="current-time">0:00</span>
                 <div id="progress-bar" title="Click to seek">
@@ -127,7 +113,6 @@
               </div>
             </div>
 
-            <!-- Simple 4-Button Controls -->
             <div id="player-controls">
               <button type="button" onclick="audioPrev()" title="Previous Track [Left Arrow]">⏮</button>
               <button type="button" id="play-btn" onclick="togglePlay()" title="Play / Pause [Space]">▶</button>
@@ -136,12 +121,10 @@
             </div>
           </div>
 
-          <!-- AUDIO ELEMENT -->
           <audio id="audio" preload="metadata"></audio>
         </div>
       </div>
 
-      <!-- Elsewhere Box -->
       <div class="box">
         <div class="box-title">✦ elsewhere</div>
         <ul>
@@ -153,10 +136,8 @@
 
     </aside>
 
-    <!-- ===== CENTER CONTENT ===== -->
     <section id="main">
 
-      <!-- Welcome Box -->
       <div class="box">
         <div class="box-title">
           <span>◆ welcome, visitor!</span>
@@ -186,7 +167,6 @@
 
       <div class="divider" aria-hidden="true">· · · ✦ · · · ◆ · · · ✦ · · ·</div>
 
-      <!-- Interests Box -->
       <div class="box" id="interests">
         <div class="box-title">★ creative &amp; tech interests</div>
         <ul class="interests">
@@ -200,7 +180,6 @@
 
       <div class="divider" aria-hidden="true">· · · ✦ · · · ◆ · · · ✦ · · ·</div>
 
-      <!-- Favorite Games Box -->
       <div class="box" id="games">
         <div class="box-title">
           <span>🎮 games i play</span>
@@ -208,7 +187,6 @@
         </div>
         <div class="games-shelf">
 
-          <!-- 1. Sekiro -->
           <div class="game-card">
             <div class="game-left">
               <span class="game-icon">⚔️</span>
@@ -220,7 +198,6 @@
             <span class="game-tag">GOTY</span>
           </div>
 
-          <!-- 2. Summertime Saga -->
           <div class="game-card">
             <div class="game-left">
               <span class="game-icon">📖</span>
@@ -232,7 +209,6 @@
             <span class="game-tag">STORY</span>
           </div>
 
-          <!-- 3. CK3 -->
           <div class="game-card">
             <div class="game-left">
               <span class="game-icon">👑</span>
@@ -244,7 +220,6 @@
             <span class="game-tag">DYNASTY</span>
           </div>
 
-          <!-- 4. DS Remastered -->
           <div class="game-card">
             <div class="game-left">
               <span class="game-icon">💀</span>
@@ -256,7 +231,6 @@
             <span class="game-tag">CLASSIC</span>
           </div>
 
-          <!-- 5. Stardew Valley -->
           <div class="game-card">
             <div class="game-left">
               <span class="game-icon">🌾</span>
@@ -268,7 +242,6 @@
             <span class="game-tag">COZY</span>
           </div>
 
-          <!-- 6. Minecraft -->
           <div class="game-card">
             <div class="game-left">
               <span class="game-icon">⛏️</span>
@@ -280,7 +253,6 @@
             <span class="game-tag">BLOCKS</span>
           </div>
 
-          <!-- 7. Half-Life 2 -->
           <div class="game-card">
             <div class="game-left">
               <span class="game-icon">🧪</span>
@@ -297,7 +269,6 @@
 
       <div class="divider" aria-hidden="true">· · · ✦ · · · ◆ · · · ✦ · · ·</div>
 
-      <!-- Devlog & Updates Box -->
       <div class="box" id="devlog">
         <div class="box-title">
           <span>✉ devlog &amp; site updates</span>
@@ -343,7 +314,6 @@
 
       <div class="divider" aria-hidden="true">· · · ✦ · · · ◆ · · · ✦ · · ·</div>
 
-      <!-- Indie Webring Box -->
       <div class="webring-box">
         <div class="webring-title">✦ INDIE WEBRING ✦</div>
         <div class="webring-links">
@@ -356,10 +326,8 @@
 
     </section>
 
-    <!-- ===== RIGHT SIDEBAR ===== -->
     <aside class="sidebar" id="right-sidebar">
 
-      <!-- About Me Box -->
       <div class="box" id="about">
         <div class="box-title">◈ about me</div>
         <div class="status-inner">
@@ -373,7 +341,6 @@
         </div>
       </div>
 
-      <!-- Skills Box -->
       <div class="box">
         <div class="box-title">✦ skills matrix</div>
         <ul class="skills-list">
@@ -390,12 +357,10 @@
         </ul>
       </div>
 
-      <!-- Retro 88x31 Badges Box -->
       <div class="box">
         <div class="box-title">★ 88x31 badges</div>
         <div class="buttons-wall">
 
-          <!-- 1. Neocities Badge -->
           <a class="badge-88x31" href="https://neocities.org/browse" target="_blank" rel="noopener" title="Hosted on Neocities">
             <svg viewBox="0 0 88 31" xmlns="http://www.w3.org/2000/svg">
               <rect width="88" height="31" fill="#0d111a" stroke="#7eb8c8" stroke-width="2"/>
@@ -405,7 +370,6 @@
             </svg>
           </a>
 
-          <!-- 2. HTML5 Valid Badge -->
           <a class="badge-88x31" href="https://validator.w3.org" target="_blank" rel="noopener" title="W3C HTML5 Valid">
             <svg viewBox="0 0 88 31" xmlns="http://www.w3.org/2000/svg">
               <rect width="88" height="31" fill="#20110a" stroke="#e44d26" stroke-width="2"/>
@@ -415,7 +379,6 @@
             </svg>
           </a>
 
-          <!-- 3. Made with Love Badge -->
           <span class="badge-88x31" title="Handcrafted with Love">
             <svg viewBox="0 0 88 31" xmlns="http://www.w3.org/2000/svg">
               <rect width="88" height="31" fill="#1e0f1d" stroke="#c87eb8" stroke-width="2"/>
@@ -425,7 +388,6 @@
             </svg>
           </span>
 
-          <!-- 4. Firefox Best Viewed Badge -->
           <a class="badge-88x31" href="https://mozilla.org/firefox" target="_blank" rel="noopener" title="Best Viewed in Firefox">
             <svg viewBox="0 0 88 31" xmlns="http://www.w3.org/2000/svg">
               <rect width="88" height="31" fill="#1c1106" stroke="#ff9400" stroke-width="2"/>
@@ -435,7 +397,6 @@
             </svg>
           </a>
 
-          <!-- 5. Vim / VS Code Badge -->
           <span class="badge-88x31" title="Engineered in VS Code & Vim">
             <svg viewBox="0 0 88 31" xmlns="http://www.w3.org/2000/svg">
               <rect width="88" height="31" fill="#08180e" stroke="#5af78e" stroke-width="2"/>
@@ -445,7 +406,6 @@
             </svg>
           </span>
 
-          <!-- 6. No Tracking Badge -->
           <span class="badge-88x31" title="100% Privacy Friendly — Zero Tracking">
             <svg viewBox="0 0 88 31" xmlns="http://www.w3.org/2000/svg">
               <rect width="88" height="31" fill="#0a151b" stroke="#7eb8c8" stroke-width="2"/>
@@ -455,7 +415,6 @@
             </svg>
           </span>
 
-          <!-- 7. 800x600 Best Viewed Badge -->
           <span class="badge-88x31" title="Retro 1024x768 Standard">
             <svg viewBox="0 0 88 31" xmlns="http://www.w3.org/2000/svg">
               <rect width="88" height="31" fill="#14141e" stroke="#c8a97e" stroke-width="2"/>
@@ -465,7 +424,6 @@
             </svg>
           </span>
 
-          <!-- 8. GitHub Badge -->
           <a class="badge-88x31" href="https://github.com/yashmishra11" target="_blank" rel="noopener" title="Yash Mishra on GitHub">
             <svg viewBox="0 0 88 31" xmlns="http://www.w3.org/2000/svg">
               <rect width="88" height="31" fill="#120e20" stroke="#a8d8ea" stroke-width="2"/>
@@ -481,14 +439,12 @@
     </aside>
   </main>
 
-  <!-- ===== PROJECTS SECTION ===== -->
   <section id="projects" class="full-section">
     <div class="section-header">
       <span>◆ my projects</span>
       <span class="section-subtitle">HANDCRAFTED &amp; DEPLOYED</span>
     </div>
 
-    <!-- Filter Toolbar -->
     <div class="section-toolbar">
       <div class="project-filters">
         <button class="proj-filter-btn active" onclick="filterProjects('all')">ALL (6)</button>
@@ -501,7 +457,6 @@
 
     <div class="projects-grid" id="projects-grid-container">
 
-      <!-- Project 1 -->
       <div class="project-card" data-cat="react api">
         <div class="project-top">
           <div class="project-title">⬥ Anime API Platform</div>
@@ -517,7 +472,6 @@
         </div>
       </div>
 
-      <!-- Project 2 -->
       <div class="project-card" data-cat="react api">
         <div class="project-top">
           <div class="project-title">⬥ Pokédex Web App</div>
@@ -533,7 +487,6 @@
         </div>
       </div>
 
-      <!-- Project 3 -->
       <div class="project-card" data-cat="fullstack">
         <div class="project-top">
           <div class="project-title">⬥ CMS – SECL Enterprise</div>
@@ -549,7 +502,6 @@
         </div>
       </div>
 
-      <!-- Project 4 -->
       <div class="project-card" data-cat="react fullstack">
         <div class="project-top">
           <div class="project-title">⬥ TodoList – React &amp; Firebase</div>
@@ -565,7 +517,6 @@
         </div>
       </div>
 
-      <!-- Project 5 -->
       <div class="project-card" data-cat="react fullstack">
         <div class="project-top">
           <div class="project-title">⬥ Blog-Mongo Full Stack</div>
@@ -581,7 +532,6 @@
         </div>
       </div>
 
-      <!-- Project 6 (NEW: Completes the 3x2 Grid!) -->
       <div class="project-card" data-cat="fullstack api">
         <div class="project-top">
           <div class="project-title">⬥ ShopEase – Spring Boot API</div>
@@ -601,7 +551,6 @@
     <div class="divider" aria-hidden="true">· · · ✦ · · · ◆ · · · ✦ · · ·</div>
   </section>
 
-  <!-- ===== GUESTBOOK SECTION ===== -->
   <section id="guestbook" class="full-section">
     <div class="section-header">
       <span>✎ indie web guestbook</span>
@@ -609,19 +558,17 @@
     </div>
 
     <div class="guestbook-container">
-      
-      <!-- Guestbook Entries List -->
+
       <div class="guestbook-entries-wrapper">
         <div class="guestbook-header-small">
           <span>◈ VISITOR LOGS</span>
           <span id="guestbook-counter">3 ENTRIES</span>
         </div>
         <div class="entries-list" id="guestbook-entries">
-          <!-- Populated by JavaScript from localStorage with nostalgic defaults -->
+          
         </div>
       </div>
 
-      <!-- Guestbook Submission Form -->
       <div class="guestbook-form-wrapper">
         <div class="guestbook-form-title">✦ SIGN THE GUESTBOOK</div>
         <form class="guestbook-form" id="guestbook-form" onsubmit="handleGuestbookSubmit(event)">
@@ -659,7 +606,6 @@
     <div class="divider" aria-hidden="true">· · · ✦ · · · ◆ · · · ✦ · · ·</div>
   </section>
 
-  <!-- ===== CONTACT SECTION ===== -->
   <section id="contact" class="full-section">
     <div class="section-header">
       <span>✉ contact coordinates</span>
@@ -668,7 +614,6 @@
 
     <div class="contact-grid">
 
-      <!-- Email Card -->
       <div class="contact-card">
         <div>
           <div class="contact-label">◈ email</div>
@@ -677,7 +622,6 @@
         <button class="copy-btn" onclick="copyText('yashmishra.dev@gmail.com', 'Email copied to clipboard!')">📋 COPY EMAIL</button>
       </div>
 
-      <!-- Phone Card -->
       <div class="contact-card">
         <div>
           <div class="contact-label">◈ phone</div>
@@ -686,7 +630,6 @@
         <button class="copy-btn" onclick="copyText('+918827895934', 'Phone number copied!')">📋 COPY PHONE</button>
       </div>
 
-      <!-- GitHub Card -->
       <div class="contact-card">
         <div>
           <div class="contact-label">◈ github</div>
@@ -695,7 +638,6 @@
         <a class="copy-btn" href="https://github.com/yashmishra11" target="_blank" rel="noopener">↗ VISIT GITHUB</a>
       </div>
 
-      <!-- LinkedIn Card -->
       <div class="contact-card">
         <div>
           <div class="contact-label">◈ linkedin</div>
@@ -704,7 +646,6 @@
         <a class="copy-btn" href="https://linkedin.com/in/yashmishra" target="_blank" rel="noopener">↗ VISIT PROFILE</a>
       </div>
 
-      <!-- Location Card -->
       <div class="contact-card">
         <div>
           <div class="contact-label">◈ coordinates</div>
@@ -713,7 +654,6 @@
         <span style="font-size:0.85rem; color:var(--muted); margin-top:6px;">Timezone: IST (UTC+05:30)</span>
       </div>
 
-      <!-- Resume / CV Card -->
       <div class="contact-card">
         <div>
           <div class="contact-label">◈ curriculum vitae</div>
@@ -727,7 +667,6 @@
     <div class="divider" aria-hidden="true">· · · ✦ · · · ◆ · · · ✦ · · ·</div>
   </section>
 
-  <!-- ===== RESUME RETRO MODAL ===== -->
   <div id="resume-modal" class="modal-backdrop" onclick="closeResumeModal(event)">
     <div class="modal-window" onclick="event.stopPropagation()">
       <div class="modal-titlebar">
@@ -763,10 +702,8 @@
     </div>
   </div>
 
-  <!-- TOAST NOTIFICATION CONTAINER -->
   <div id="toast-container"></div>
 
-  <!-- FOOTER -->
   <footer id="footer">
     <p class="footer-tagline">✦ Yash Mishra · handcrafted with ♥ · hosted on neocities ✦</p>
     <p class="footer-sub">best viewed on any screen · no cookies · est. 2025 · updated 2026</p>
@@ -775,11 +712,8 @@
     </div>
   </footer>
 
-  <!-- ===== JAVASCRIPT LOGIC ===== -->
   <script>
-    /* ==========================================================================
-       1. WEB AUDIO API CHIPTUNE SYNTHESIZER & SOUND FX
-       ========================================================================== */
+    
     let audioCtx = null;
     let sfxEnabled = true;
 
@@ -820,9 +754,6 @@
       setTimeout(() => playBeep(659, 'square', 0.15), 240);
     }
 
-    /* ==========================================================================
-       2. CLEAN RETRO AUDIO PLAYER ENGINE
-       ========================================================================== */
     const playlist = [
       {
         title: "Snake Eater",
@@ -861,7 +792,6 @@
     let isPlaying = false;
     let isMuted = false;
 
-    // DOM Elements
     const audio = document.getElementById('audio');
     const playerEl = document.getElementById('player');
     const playBtn = document.getElementById('play-btn');
@@ -875,7 +805,6 @@
     const trackIndexEl = document.getElementById('track-index');
     const statusSongEl = document.getElementById('status-song-name');
 
-    // Web Audio Synthesizer State
     let synthTimer = null;
     let synthStep = 0;
     let synthCurrentTime = 0;
@@ -968,7 +897,7 @@
     function togglePlay() {
       const track = playlist[currentTrackIdx];
       if (isPlaying) {
-        // Pause
+        
         if (!track.isSynth) {
           audio.pause();
         } else {
@@ -978,7 +907,7 @@
         playBtn.textContent = '▶';
         playerEl.classList.remove('playing');
       } else {
-        // Play
+        
         if (!track.isSynth) {
           audio.play().then(() => {
             isPlaying = true;
@@ -1057,7 +986,6 @@
       }
     });
 
-    // Spacebar to Play/Pause
     window.addEventListener('keydown', (e) => {
       if (['INPUT', 'TEXTAREA'].includes(document.activeElement.tagName)) return;
       if (e.code === 'Space') {
@@ -1066,17 +994,12 @@
       }
     });
 
-    // Initialize player
     loadTrack(0);
 
-    /* ==========================================================================
-       3. RETRO CONTROLS (CRT, SFX, PARTY MODE)
-       ========================================================================== */
     const crtBtn = document.getElementById('crt-toggle-btn');
     const sfxBtn = document.getElementById('sfx-toggle-btn');
     const partyBtn = document.getElementById('party-toggle-btn');
 
-    // CRT persistence
     const savedCrt = localStorage.getItem('indie_crt');
     if (savedCrt === 'off') {
       document.body.classList.add('crt-off');
@@ -1106,9 +1029,6 @@
     }
     partyBtn.addEventListener('click', triggerPartyMode);
 
-    /* ==========================================================================
-       4. KONAMI CODE EASTER EGG (↑ ↑ ↓ ↓ ← → ← → B A)
-       ========================================================================== */
     const konamiCode = ['ArrowUp','ArrowUp','ArrowDown','ArrowDown','ArrowLeft','ArrowRight','ArrowLeft','ArrowRight','b','a'];
     let konamiIndex = 0;
 
@@ -1127,9 +1047,6 @@
       }
     });
 
-    /* ==========================================================================
-       5. DEVLOG FILTERING
-       ========================================================================== */
     function filterLogs(category) {
       playBeep(450, 'square', 0.03);
       const buttons = document.querySelectorAll('.devlog-filters .filter-btn');
@@ -1146,9 +1063,6 @@
       });
     }
 
-    /* ==========================================================================
-       6. PROJECT FILTERING
-       ========================================================================== */
     function filterProjects(filter) {
       playBeep(520, 'square', 0.04);
       const buttons = document.querySelectorAll('.proj-filter-btn');
@@ -1169,9 +1083,6 @@
       document.getElementById('project-count-display').textContent = `SHOWING ${visible} OF ${cards.length} PROJECTS`;
     }
 
-    /* ==========================================================================
-       7. INTERACTIVE GUESTBOOK (LOCAL STORAGE PERSISTENCE)
-       ========================================================================== */
     const initialGuestbook = [
       {
         name: "@retro_surfer",
@@ -1195,7 +1106,6 @@
 
     let selectedBadge = "👾";
 
-    // Set up badge selector buttons
     document.querySelectorAll('.badge-option').forEach(btn => {
       btn.addEventListener('click', function() {
         playBeep(500, 'square', 0.03);
@@ -1280,9 +1190,6 @@
 
     renderGuestbook();
 
-    /* ==========================================================================
-       8. UTILITY: COPY TO CLIPBOARD & TOASTS
-       ========================================================================== */
     function showToast(message) {
       const container = document.getElementById('toast-container');
       const toast = document.createElement('div');
@@ -1306,9 +1213,6 @@
       });
     }
 
-    /* ==========================================================================
-       9. RESUME MODAL
-       ========================================================================== */
     const resumeModal = document.getElementById('resume-modal');
 
     function openResumeModal() {

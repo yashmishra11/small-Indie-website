@@ -1,298 +1,1150 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Yash Mishra</title>
+  <title>Yash Mishra ✦ Indie Web &amp; Full Stack Dev</title>
+  <meta name="description" content="Personal retro-indie corner of Yash Mishra — Full-stack developer, CS student, and retro web enthusiast. Handcrafted for Neocities."/>
+  <meta name="theme-color" content="#0a0a0f"/>
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:title" content="Yash Mishra ✦ Indie Web & Full Stack Dev"/>
+  <meta property="og:description" content="Handcrafted retro Neocities personal website with projects, devlogs, chiptune player, and guestbook."/>
+  <meta property="og:image" content="dpp.png"/>
+  <meta property="og:url" content="https://yashmishra.neocities.org"/>
+
+  <!-- Retro Pixel Favicon (Inline SVG Data URI) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%237eb8c8' d='M8 0h1v3H8zm0 13h1v3H8zM0 8h3v1H0zm13 0h3v1h-3zM2 2h3v2H2zm9 9h3v2h-3zM11 2h3v3h-2V3h-1zM2 11h3v3H3v-2H2zm4-5h4v4H6z'/%3E%3Cpath fill='%23c8a97e' d='M7 7h2v2H7z'/%3E%3C/svg%3E"/>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
 
+  <!-- CRT SCANLINE & PHOSPHOR OVERLAY -->
+  <div id="crt-overlay" aria-hidden="true"></div>
+
+  <!-- TOP RETRO UTILITY BAR -->
+  <div id="utility-bar">
+    <div class="utility-left">
+      <span class="live-dot" title="Server Status: Online"></span>
+      <span>NEOCITIES ONLINE ✦ BILASPUR, IN 22°N 82°E</span>
+    </div>
+    <div class="utility-right">
+      <button class="retro-pill-btn" id="crt-toggle-btn" title="Toggle CRT scanlines">📺 CRT: ON</button>
+      <button class="retro-pill-btn" id="sfx-toggle-btn" title="Toggle 8-bit sound effects">♫ SFX: ON</button>
+      <button class="retro-pill-btn" id="party-toggle-btn" title="Toggle Cyber Party Mode">👾 PARTY</button>
+    </div>
+  </div>
 
   <!-- HEADER -->
-  <div id="header">
-    <div id="site-title">yashmishra<span>.neocities</span>.org</div>
-    <div id="nav-icons">★ &nbsp; ✦ &nbsp; ◆ &nbsp; ✦ &nbsp; ★</div>
-  </div>
+  <header id="header">
+    <div id="site-title">
+      <a href="#home">yashmishra<span>.neocities</span>.org</a>
+    </div>
+    <div id="site-tagline">✦ indie web craft · full-stack developer · retro enthusiast ✦</div>
+    <div id="nav-icons" aria-hidden="true">★ &nbsp; ✦ &nbsp; ◆ &nbsp; ✦ &nbsp; ★</div>
+  </header>
 
-  <!-- TOP NAV BAR -->
-  <div id="topnav">
-    <a href="#home">home</a>
-    <a href="#about">about</a>
-    <a href="#projects">projects</a>
-    <a href="#interests">interests</a>
-    <a href="#contact">contact</a>
-  </div>
+  <!-- TOP STICKY NAV BAR -->
+  <nav id="topnav" aria-label="Main Navigation">
+    <a href="#home">✦ home</a>
+    <a href="#about">◈ about</a>
+    <a href="#projects">⚙ projects</a>
+    <a href="#devlog">✉ devlog</a>
+    <a href="#guestbook">✎ guestbook</a>
+    <a href="#contact">✉ contact</a>
+  </nav>
+
+  <!-- HOME ANCHOR TARGET -->
+  <div id="home"></div>
 
   <!-- MAIN 3-COLUMN LAYOUT -->
-  <div id="wrapper" id="home">
+  <main id="wrapper">
 
-    <!-- LEFT SIDEBAR -->
-    <div class="sidebar" id="left-sidebar">
+    <!-- ===== LEFT SIDEBAR ===== -->
+    <aside class="sidebar" id="left-sidebar">
 
+      <!-- Navigation Box -->
       <div class="box">
-        <div class="box-title">⚙ navigate</div>
+        <div class="box-title">
+          <span>⚙ navigate</span>
+          <span class="badge">v2.5</span>
+        </div>
         <ul>
-          <li>⬥ <a href="#home">home</a></li>
-          <li>⬥ <a href="#about">about me</a></li>
-          <li>⬥ <a href="#projects">my projects</a></li>
-          <li>⬥ <a href="#interests">interests</a></li>
-          <li>⬥ <a href="#contact">contact</a></li>
+          <li>⬥ <a href="#home">home station</a></li>
+          <li>⬥ <a href="#about">about author</a></li>
+          <li>⬥ <a href="#projects">code projects</a></li>
+          <li>⬥ <a href="#devlog">devlog &amp; updates</a></li>
+          <li>⬥ <a href="#guestbook">indie guestbook</a></li>
+          <li>⬥ <a href="#contact">get in touch</a></li>
         </ul>
       </div>
 
+      <!-- Status & Profile Box -->
       <div class="box">
-        <div class="box-title">◈ status</div>
+        <div class="box-title">◈ status &amp; music</div>
         <div class="status-inner">
-          <img src="dpp.png" alt="me" class="sidebar-img"/>
-          <p>currently: <span class="accent">coding ✦</span></p>
-          <p>mood: <span class="accent">focused</span></p>
-          <p>music: <span class="accent">Snake Eater</span></p>
+          <div class="sidebar-img-wrapper">
+            <img src="dpp.png" alt="Yash Mishra Profile" class="sidebar-img"/>
+            <span class="avatar-overlay-tag">ONLINE ✦</span>
+          </div>
+          <p>currently: <span class="accent">crafting web ✦</span></p>
+          <p>mood: <span class="accent">nostalgic &amp; focused</span></p>
+          <p>playing: <span class="accent" id="status-song-name">Snake Eater</span></p>
+
+          <!-- ENHANCED RETRO MUSIC PLAYER -->
           <div id="player">
             <div id="player-screen">
-              <div id="player-label">♫ now playing</div>
+              <div class="player-screen-top">
+                <span id="player-label">♫ RETRO CHIPTUNE</span>
+                <span id="track-index">1 / 3</span>
+              </div>
               <div id="player-title">Snake Eater</div>
-              <div id="player-artist">Cynthia Harrell</div>
+              <div id="player-artist">Cynthia Harrell (MGS3)</div>
+              
               <div id="player-time">
                 <span id="current-time">0:00</span>
-                <div id="progress-bar"><div id="progress-fill"></div></div>
+                <div id="progress-bar" title="Click to seek">
+                  <div id="progress-fill"></div>
+                </div>
                 <span id="duration">0:00</span>
               </div>
+
+              <!-- Animated Equalizer Bars -->
+              <div id="equalizer" aria-hidden="true">
+                <div class="eq-bar"></div>
+                <div class="eq-bar"></div>
+                <div class="eq-bar"></div>
+                <div class="eq-bar"></div>
+                <div class="eq-bar"></div>
+              </div>
             </div>
+
             <div id="player-controls">
-              <button onclick="audioRestart()">⏮</button>
-              <button id="play-btn" onclick="togglePlay()">▶</button>
-              <button onclick="audioSkip()">⏭</button>
+              <button onclick="audioPrev()" title="Previous Track">⏮</button>
+              <button id="play-btn" onclick="togglePlay()" title="Play / Pause">▶</button>
+              <button onclick="audioNext()" title="Next Track">⏭</button>
+              <button id="mute-btn" onclick="toggleMute()" title="Mute audio">🔈</button>
             </div>
+            <div class="player-subinfo">✦ click play to listen ✦</div>
           </div>
-          <audio id="audio" src="https://archive.org/download/snake-eater-cynthia-harrell/SNAKE EATER - Cynthia Harrell.mp3" preload="metadata" loop></audio>
+
+          <!-- AUDIO ELEMENT -->
+          <audio id="audio" preload="metadata"></audio>
         </div>
       </div>
 
+      <!-- Elsewhere Box -->
       <div class="box">
         <div class="box-title">✦ elsewhere</div>
         <ul>
-          <li>⬥ <a href="https://github.com/yashmishra" target="_blank">github</a></li>
-          <li>⬥ <a href="https://linkedin.com/in/yashmishra" target="_blank">linkedin</a></li>
-          <li>⬥ <a href="mailto:you@email.com">email me</a></li>
+          <li>⬥ <a href="https://github.com/yashmishra11" target="_blank" rel="noopener">github.com/yashmishra11</a></li>
+          <li>⬥ <a href="https://linkedin.com/in/yashmishra" target="_blank" rel="noopener">linkedin / in / yashmishra</a></li>
+          <li>⬥ <a href="https://neocities.org/site/yashmishra" target="_blank" rel="noopener">neocities / yashmishra</a></li>
         </ul>
       </div>
 
-    </div>
+    </aside>
 
-    <!-- CENTER CONTENT -->
-    <div id="main">
+    <!-- ===== CENTER CONTENT ===== -->
+    <section id="main">
 
+      <!-- Welcome Box -->
       <div class="box">
-        <div class="box-title">◆ welcome, visitor!</div>
+        <div class="box-title">
+          <span>◆ welcome, visitor!</span>
+          <span class="badge">#web-surfer</span>
+        </div>
         <div class="welcome-inner">
           <div class="welcome-text">
-            <p>hello web surfer! welcome to my little corner of the internet.</p>
+            <p>hello web wanderer! welcome to my handcrafted sanctuary on the indie web.</p>
             <br/>
-            <p>I'm a Computer Science student with a strong interest in building practical, user-focused web applications. I primarily work with React and modern JavaScript to create clean, responsive interfaces, and I have hands-on experience with backend fundamentals like Node.js, MySQL, and REST APIs.</p>
+            <p>I am a Computer Science undergraduate (B.Tech CSE, graduating June 2026) with a passion for designing practical, lightning-fast, and user-centric web applications. I bridge modern JavaScript frameworks like React &amp; Next.js with solid full-stack backend architectures in Node.js, Spring Boot, MySQL, and cloud services.</p>
             <br/>
-            <p>i hope you enjoy your stay ✦</p>
+            <p class="muted-lead">this site is built with pure HTML, CSS, and JS — paying homage to the creative golden era of the personal web while highlighting modern engineering practices.</p>
+
+            <div class="welcome-highlights">
+              <div class="highlight-pill">
+                <strong>FRONTEND CRAFT</strong>
+                React, Next.js, TypeScript, Responsive CSS
+              </div>
+              <div class="highlight-pill">
+                <strong>BACKEND &amp; CLOUD</strong>
+                Node.js, Spring Boot, MySQL, MongoDB, AWS
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
-      <div class="divider">· · · ✦ · · · ◆ · · · ✦ · · ·</div>
+      <div class="divider" aria-hidden="true">· · · ✦ · · · ◆ · · · ✦ · · ·</div>
 
+      <!-- Interests Box -->
       <div class="box" id="interests">
-        <div class="box-title">★ interests</div>
+        <div class="box-title">★ creative &amp; tech interests</div>
         <ul class="interests">
-          <li>⬥ <a href="https://developer.mozilla.org" target="_blank">web development</a></li>
-          <li>⬥ open source</li>
-          <li>⬥ photography</li>
-          <li>⬥ coffee &amp; books</li>
+          <li>⬥ <a href="https://developer.mozilla.org" target="_blank" rel="noopener">modern web standards &amp; indie web revival</a></li>
+          <li>⬥ open source software &amp; distributed systems</li>
+          <li>⬥ street &amp; nature photography</li>
+          <li>⬥ chiptune music, pixel art &amp; retro game development</li>
+          <li>⬥ fresh roast coffee &amp; tech literature</li>
         </ul>
       </div>
-      <div class="divider">· · · ✦ · · · ◆ · · · ✦ · · ·</div>
 
-      <div class="box">
-        <div class="box-title">✉ latest update</div>
-        <p class="log-date">02/25/26 —</p>
-        <p>just launched this site! still building everything out. check back soon for more pages.</p>
+      <div class="divider" aria-hidden="true">· · · ✦ · · · ◆ · · · ✦ · · ·</div>
+
+      <!-- Devlog & Updates Box -->
+      <div class="box" id="devlog">
+        <div class="box-title">
+          <span>✉ devlog &amp; site updates</span>
+          <span class="badge">LOGS</span>
+        </div>
+        <div class="devlog-filters">
+          <button class="filter-btn active" onclick="filterLogs('all')">ALL</button>
+          <button class="filter-btn" onclick="filterLogs('site')">SITE</button>
+          <button class="filter-btn" onclick="filterLogs('projects')">CODE</button>
+          <button class="filter-btn" onclick="filterLogs('life')">JOURNAL</button>
+        </div>
+        <div class="devlog-list" id="devlog-entries">
+          <div class="devlog-item" data-category="site">
+            <div class="devlog-meta">
+              <span class="devlog-date">09/24/2026 —</span>
+              <span class="devlog-tag">SITE v2.5</span>
+            </div>
+            <p class="devlog-desc">Added CRT scanline engine, Web Audio SFX synth, multi-track chiptune player, interactive guestbook with local persistence, and Konami code Easter egg.</p>
+          </div>
+          <div class="devlog-item" data-category="projects">
+            <div class="devlog-meta">
+              <span class="devlog-date">05/20/2026 —</span>
+              <span class="devlog-tag">CODE</span>
+            </div>
+            <p class="devlog-desc">Finished Complaint Monitoring System (CMS) with PHP MVC architecture and optimized SQL queries. Added full project documentation on GitHub.</p>
+          </div>
+          <div class="devlog-item" data-category="projects">
+            <div class="devlog-meta">
+              <span class="devlog-date">02/28/2026 —</span>
+              <span class="devlog-tag">CODE</span>
+            </div>
+            <p class="devlog-desc">Deployed Blog-Mongo full-stack system with React, TypeScript &amp; MongoDB backend. Integrated token auth and markdown authoring.</p>
+          </div>
+          <div class="devlog-item" data-category="site">
+            <div class="devlog-meta">
+              <span class="devlog-date">02/25/2026 —</span>
+              <span class="devlog-tag">LAUNCH</span>
+            </div>
+            <p class="devlog-desc">Official launch on Neocities! Handcrafted with semantic HTML, custom VT323 typography, and pixelated nostalgia.</p>
+          </div>
+        </div>
       </div>
-      <div class="divider">· · · ✦ · · · ◆ · · · ✦ · · ·</div>
 
-    </div>
+      <div class="divider" aria-hidden="true">· · · ✦ · · · ◆ · · · ✦ · · ·</div>
 
-    <!-- RIGHT SIDEBAR -->
-    <div class="sidebar" id="right-sidebar">
+      <!-- Indie Webring Box -->
+      <div class="webring-box">
+        <div class="webring-title">✦ INDIE WEBRING ✦</div>
+        <div class="webring-links">
+          <a href="https://neocities.org/browse" target="_blank" rel="noopener" onclick="playBeep()">[◀ Prev]</a>
+          <a href="https://neocities.org" target="_blank" rel="noopener" onclick="playBeep()">[Hub]</a>
+          <a href="https://neocities.org/browse?sort_by=random" target="_blank" rel="noopener" onclick="playBeep()">[🎲 Random]</a>
+          <a href="https://neocities.org/browse" target="_blank" rel="noopener" onclick="playBeep()">[Next ▶]</a>
+        </div>
+      </div>
 
+    </section>
+
+    <!-- ===== RIGHT SIDEBAR ===== -->
+    <aside class="sidebar" id="right-sidebar">
+
+      <!-- About Me Box -->
       <div class="box" id="about">
         <div class="box-title">◈ about me</div>
         <div class="status-inner">
           <p><span class="accent">name:</span> Yash Mishra</p>
-          <p><span class="accent">role:</span> Full Stack Dev</p>
-          <p><span class="accent">city:</span> Bilaspur, CG</p>
+          <p><span class="accent">role:</span> Full Stack Developer</p>
+          <p><span class="accent">city:</span> Bilaspur, CG 🇮🇳</p>
           <p><span class="accent">edu:</span> B.Tech CSE</p>
           <p><span class="accent">grad:</span> 06/2026</p>
           <p><span class="accent">lang:</span> Java, JS, Python, PHP</p>
+          <p><span class="accent">hobbies:</span> Indie Web, 8-Bit Audio</p>
         </div>
       </div>
 
+      <!-- Skills Box -->
       <div class="box">
-        <div class="box-title">✦ skills</div>
-        <ul>
-          <li>⬥ HTML / CSS</li>
-          <li>⬥ JavaScript</li>
-          <li>⬥ React / Next.js</li>
-          <li>⬥ Node.js / Express</li>
-          <li>⬥ MongoDB / MySQL</li>
-          <li>⬥ Firebase</li>
-          <li>⬥ AWS</li>
-          <li>⬥ TailwindCSS</li>
-          <li>⬥ Spring Boot</li>
-          <li>⬥ Git / GitHub</li>
-          <li>⬥ SEO</li>
+        <div class="box-title">✦ skills matrix</div>
+        <ul class="skills-list">
+          <li><span>HTML5 / Modern CSS</span> <span class="skill-type">FRONT</span></li>
+          <li><span>JavaScript / ESNext</span> <span class="skill-type">FRONT</span></li>
+          <li><span>React.js / Next.js</span> <span class="skill-type">FRONT</span></li>
+          <li><span>Node.js / Express</span> <span class="skill-type">BACK</span></li>
+          <li><span>Spring Boot / Java</span> <span class="skill-type">BACK</span></li>
+          <li><span>MongoDB / MySQL</span> <span class="skill-type">DATA</span></li>
+          <li><span>Firebase / Firestore</span> <span class="skill-type">CLOUD</span></li>
+          <li><span>AWS / Deployment</span> <span class="skill-type">DEVOPS</span></li>
+          <li><span>Git &amp; GitHub CI</span> <span class="skill-type">TOOLS</span></li>
+          <li><span>SEO &amp; Performance</span> <span class="skill-type">WEB</span></li>
         </ul>
       </div>
 
+      <!-- Retro 88x31 Badges Box -->
       <div class="box">
-        <div class="box-title">★ buttons</div>
-        <div class="buttons">
-          <a class="site-btn" href="https://neocities.org/browse" target="_blank">neocities</a>
-          <a class="site-btn" href="https://github.com/yashmishra11" target="_blank">github</a>
-          <a class="site-btn" href="https://linkedin.com/in/yashmishra" target="_blank">linkedin</a>
-          <a class="site-btn" href="mailto:you@email.com">email me</a>
+        <div class="box-title">★ 88x31 badges</div>
+        <div class="buttons-wall">
+
+          <!-- 1. Neocities Badge -->
+          <a class="badge-88x31" href="https://neocities.org/browse" target="_blank" rel="noopener" title="Hosted on Neocities">
+            <svg viewBox="0 0 88 31" xmlns="http://www.w3.org/2000/svg">
+              <rect width="88" height="31" fill="#0d111a" stroke="#7eb8c8" stroke-width="2"/>
+              <rect x="2" y="2" width="84" height="27" fill="#141824"/>
+              <text x="44" y="14" fill="#c87eb8" font-family="'Press Start 2P', monospace" font-size="6" text-anchor="middle" font-weight="bold">NEOCITIES</text>
+              <text x="44" y="24" fill="#7eb8c8" font-family="'Press Start 2P', monospace" font-size="5" text-anchor="middle">★ HOSTED ★</text>
+            </svg>
+          </a>
+
+          <!-- 2. HTML5 Valid Badge -->
+          <a class="badge-88x31" href="https://validator.w3.org" target="_blank" rel="noopener" title="W3C HTML5 Valid">
+            <svg viewBox="0 0 88 31" xmlns="http://www.w3.org/2000/svg">
+              <rect width="88" height="31" fill="#20110a" stroke="#e44d26" stroke-width="2"/>
+              <rect x="2" y="2" width="84" height="27" fill="#2d160e"/>
+              <text x="44" y="14" fill="#f16529" font-family="'Press Start 2P', monospace" font-size="6" text-anchor="middle">HTML5</text>
+              <text x="44" y="24" fill="#c8a97e" font-family="'Press Start 2P', monospace" font-size="5" text-anchor="middle">VALID CODE</text>
+            </svg>
+          </a>
+
+          <!-- 3. Made with Love Badge -->
+          <span class="badge-88x31" title="Handcrafted with Love">
+            <svg viewBox="0 0 88 31" xmlns="http://www.w3.org/2000/svg">
+              <rect width="88" height="31" fill="#1e0f1d" stroke="#c87eb8" stroke-width="2"/>
+              <rect x="2" y="2" width="84" height="27" fill="#291227"/>
+              <text x="44" y="13" fill="#ff79c6" font-family="'Press Start 2P', monospace" font-size="5" text-anchor="middle">MADE WITH</text>
+              <text x="44" y="24" fill="#c87eb8" font-family="'Press Start 2P', monospace" font-size="6" text-anchor="middle">♥ &amp; CODE</text>
+            </svg>
+          </span>
+
+          <!-- 4. Firefox Best Viewed Badge -->
+          <a class="badge-88x31" href="https://mozilla.org/firefox" target="_blank" rel="noopener" title="Best Viewed in Firefox">
+            <svg viewBox="0 0 88 31" xmlns="http://www.w3.org/2000/svg">
+              <rect width="88" height="31" fill="#1c1106" stroke="#ff9400" stroke-width="2"/>
+              <rect x="2" y="2" width="84" height="27" fill="#2a1908"/>
+              <text x="44" y="13" fill="#ff9400" font-family="'Press Start 2P', monospace" font-size="5" text-anchor="middle">FIREFOX</text>
+              <text x="44" y="24" fill="#ffd700" font-family="'Press Start 2P', monospace" font-size="5" text-anchor="middle">FRIENDLY 🦊</text>
+            </svg>
+          </a>
+
+          <!-- 5. Vim / VS Code Badge -->
+          <span class="badge-88x31" title="Engineered in VS Code & Vim">
+            <svg viewBox="0 0 88 31" xmlns="http://www.w3.org/2000/svg">
+              <rect width="88" height="31" fill="#08180e" stroke="#5af78e" stroke-width="2"/>
+              <rect x="2" y="2" width="84" height="27" fill="#0e2315"/>
+              <text x="44" y="13" fill="#5af78e" font-family="'Press Start 2P', monospace" font-size="5" text-anchor="middle">VS CODE</text>
+              <text x="44" y="24" fill="#7eb8c8" font-family="'Press Start 2P', monospace" font-size="5" text-anchor="middle">&amp; VIM ⚡</text>
+            </svg>
+          </span>
+
+          <!-- 6. No Tracking Badge -->
+          <span class="badge-88x31" title="100% Privacy Friendly — Zero Tracking">
+            <svg viewBox="0 0 88 31" xmlns="http://www.w3.org/2000/svg">
+              <rect width="88" height="31" fill="#0a151b" stroke="#7eb8c8" stroke-width="2"/>
+              <rect x="2" y="2" width="84" height="27" fill="#11222c"/>
+              <text x="44" y="13" fill="#7eb8c8" font-family="'Press Start 2P', monospace" font-size="5" text-anchor="middle">PRIVACY</text>
+              <text x="44" y="24" fill="#5af78e" font-family="'Press Start 2P', monospace" font-size="5" text-anchor="middle">NO TRACKING</text>
+            </svg>
+          </span>
+
+          <!-- 7. 800x600 Best Viewed Badge -->
+          <span class="badge-88x31" title="Retro 1024x768 Standard">
+            <svg viewBox="0 0 88 31" xmlns="http://www.w3.org/2000/svg">
+              <rect width="88" height="31" fill="#14141e" stroke="#c8a97e" stroke-width="2"/>
+              <rect x="2" y="2" width="84" height="27" fill="#1d1d2b"/>
+              <text x="44" y="13" fill="#c8a97e" font-family="'Press Start 2P', monospace" font-size="5" text-anchor="middle">1024x768</text>
+              <text x="44" y="24" fill="#d0cfe8" font-family="'Press Start 2P', monospace" font-size="5" text-anchor="middle">CRT READY</text>
+            </svg>
+          </span>
+
+          <!-- 8. GitHub Badge -->
+          <a class="badge-88x31" href="https://github.com/yashmishra11" target="_blank" rel="noopener" title="Yash Mishra on GitHub">
+            <svg viewBox="0 0 88 31" xmlns="http://www.w3.org/2000/svg">
+              <rect width="88" height="31" fill="#120e20" stroke="#a8d8ea" stroke-width="2"/>
+              <rect x="2" y="2" width="84" height="27" fill="#1c1630"/>
+              <text x="44" y="13" fill="#a8d8ea" font-family="'Press Start 2P', monospace" font-size="5" text-anchor="middle">GITHUB</text>
+              <text x="44" y="24" fill="#c87eb8" font-family="'Press Start 2P', monospace" font-size="5" text-anchor="middle">@yashmishra11</text>
+            </svg>
+          </a>
+
         </div>
       </div>
 
-    </div>
-  </div>
+    </aside>
+  </main>
 
   <!-- ===== PROJECTS SECTION ===== -->
-  <div id="projects" class="full-section">
-    <div class="section-header">◆ my projects</div>
-    <div class="projects-grid">
+  <section id="projects" class="full-section">
+    <div class="section-header">
+      <span>◆ my projects</span>
+      <span class="section-subtitle">HANDCRAFTED &amp; DEPLOYED</span>
+    </div>
 
-      <div class="project-card">
-        <div class="project-title">⬥ Anime API Website</div>
-        <div class="project-date">08/2024 – 09/2024</div>
-        <p>Responsive anime info platform using React.js and public REST APIs. Modular component architecture with React Hooks for state management and async API handling. Deployed on Vercel.</p>
-        <div class="project-tags">
-          <span>React.js</span><span>REST API</span><span>Hooks</span><span>Vercel</span>
+    <!-- Filter Toolbar -->
+    <div class="section-toolbar">
+      <div class="project-filters">
+        <button class="proj-filter-btn active" onclick="filterProjects('all')">ALL (6)</button>
+        <button class="proj-filter-btn" onclick="filterProjects('react')">REACT</button>
+        <button class="proj-filter-btn" onclick="filterProjects('fullstack')">FULL STACK</button>
+        <button class="proj-filter-btn" onclick="filterProjects('api')">APIs</button>
+      </div>
+      <div class="project-count" id="project-count-display">SHOWING 6 OF 6 PROJECTS</div>
+    </div>
+
+    <div class="projects-grid" id="projects-grid-container">
+
+      <!-- Project 1 -->
+      <div class="project-card" data-cat="react api">
+        <div class="project-top">
+          <div class="project-title">⬥ Anime API Platform</div>
+          <div class="project-date">08/2024 – 09/2024</div>
+          <p>Responsive anime exploration platform using React.js and public REST APIs. Implements modular component hierarchy, custom React Hooks for async API handling, and search debouncing.</p>
+          <div class="project-tags">
+            <span>React.js</span><span>REST API</span><span>Hooks</span><span>Vercel</span>
+          </div>
+        </div>
+        <div class="project-links">
+          <a class="proj-action-btn" href="https://github.com/yashmishra11" target="_blank" rel="noopener">⚡ CODE</a>
+          <a class="proj-action-btn" href="https://github.com/yashmishra11" target="_blank" rel="noopener">▶ DEMO</a>
         </div>
       </div>
 
-      <div class="project-card">
-        <div class="project-title">⬥ Pokedex</div>
-        <div class="project-date">09/2024 – 11/2024</div>
-        <p>Dynamic Pokédex app integrating the Jikan REST API for real-time Pokémon data. Reusable UI components, responsive design, cross-browser compatibility.</p>
-        <div class="project-tags">
-          <span>React.js</span><span>Jikan API</span><span>Hooks</span><span>Responsive</span>
+      <!-- Project 2 -->
+      <div class="project-card" data-cat="react api">
+        <div class="project-top">
+          <div class="project-title">⬥ Pokédex Web App</div>
+          <div class="project-date">09/2024 – 11/2024</div>
+          <p>Dynamic Pokédex web application integrating the Jikan REST API for real-time Pokémon data and stats. Features responsive UI components, type filter matrix, and caching.</p>
+          <div class="project-tags">
+            <span>React.js</span><span>Jikan API</span><span>Hooks</span><span>Responsive</span>
+          </div>
+        </div>
+        <div class="project-links">
+          <a class="proj-action-btn" href="https://github.com/yashmishra11" target="_blank" rel="noopener">⚡ CODE</a>
+          <a class="proj-action-btn" href="https://github.com/yashmishra11" target="_blank" rel="noopener">▶ DEMO</a>
         </div>
       </div>
 
-      <div class="project-card">
-        <div class="project-title">⬥ CMS – SECL</div>
-        <div class="project-date">05/2025 – 06/2025</div>
-        <p>PHP-based Complaint Monitoring System with MVC architecture. Secure auth, role-based access control, optimized SQL queries, and end-to-end complaint workflow.</p>
-        <div class="project-tags">
-          <span>PHP</span><span>MySQL</span><span>MVC</span><span>Git</span>
+      <!-- Project 3 -->
+      <div class="project-card" data-cat="fullstack">
+        <div class="project-top">
+          <div class="project-title">⬥ CMS – SECL Enterprise</div>
+          <div class="project-date">05/2025 – 06/2025</div>
+          <p>PHP-based Complaint Monitoring System designed with MVC architecture. Secure authentication, role-based access control, relational SQL schemas, and end-to-end resolution workflow.</p>
+          <div class="project-tags">
+            <span>PHP</span><span>MySQL</span><span>MVC Architecture</span><span>Git</span>
+          </div>
+        </div>
+        <div class="project-links">
+          <a class="proj-action-btn" href="https://github.com/yashmishra11" target="_blank" rel="noopener">⚡ CODE</a>
+          <a class="proj-action-btn" href="https://github.com/yashmishra11" target="_blank" rel="noopener">◈ INFO</a>
         </div>
       </div>
 
-      <div class="project-card">
-        <div class="project-title">⬥ TodoList – React</div>
-        <div class="project-date">01/2026 – 02/2026</div>
-        <p>Full-stack Todo app with React, Vite &amp; Firebase. User auth, real-time Firestore sync, glassmorphism dark UI, smooth animations. Uses React Context and useReducer.</p>
-        <div class="project-tags">
-          <span>React</span><span>Firebase</span><span>Vite</span><span>Firestore</span>
+      <!-- Project 4 -->
+      <div class="project-card" data-cat="react fullstack">
+        <div class="project-top">
+          <div class="project-title">⬥ TodoList – React &amp; Firebase</div>
+          <div class="project-date">01/2026 – 02/2026</div>
+          <p>Full-stack productivity suite with React, Vite &amp; Google Firebase. User authentication, real-time Firestore synchronization, glassmorphism dark mode, and React Context state.</p>
+          <div class="project-tags">
+            <span>React</span><span>Firebase</span><span>Vite</span><span>Firestore</span>
+          </div>
+        </div>
+        <div class="project-links">
+          <a class="proj-action-btn" href="https://github.com/yashmishra11" target="_blank" rel="noopener">⚡ CODE</a>
+          <a class="proj-action-btn" href="https://github.com/yashmishra11" target="_blank" rel="noopener">▶ DEMO</a>
         </div>
       </div>
 
-      <div class="project-card">
-        <div class="project-title">⬥ Blog-Mongo</div>
-        <div class="project-date">02/2026 – 02/2026</div>
-        <p>Full-stack blog with React, TypeScript &amp; Material UI on the frontend; Node.js, Express &amp; MongoDB on the backend. Dynamic post fetching, post creation, multi-page layout.</p>
-        <div class="project-tags">
-          <span>React</span><span>TypeScript</span><span>MongoDB</span><span>Express</span>
+      <!-- Project 5 -->
+      <div class="project-card" data-cat="react fullstack">
+        <div class="project-top">
+          <div class="project-title">⬥ Blog-Mongo Full Stack</div>
+          <div class="project-date">02/2026 – 02/2026</div>
+          <p>Full-stack content publishing platform built with React, TypeScript &amp; Material UI on the client; Node.js, Express &amp; MongoDB on backend. Includes REST endpoints and markdown editor.</p>
+          <div class="project-tags">
+            <span>React</span><span>TypeScript</span><span>MongoDB</span><span>Express</span>
+          </div>
+        </div>
+        <div class="project-links">
+          <a class="proj-action-btn" href="https://github.com/yashmishra11" target="_blank" rel="noopener">⚡ CODE</a>
+          <a class="proj-action-btn" href="https://github.com/yashmishra11" target="_blank" rel="noopener">▶ DEMO</a>
+        </div>
+      </div>
+
+      <!-- Project 6 (NEW: Completes the 3x2 Grid!) -->
+      <div class="project-card" data-cat="fullstack api">
+        <div class="project-top">
+          <div class="project-title">⬥ ShopEase – Spring Boot API</div>
+          <div class="project-date">03/2026 – 04/2026</div>
+          <p>Scalable e-commerce RESTful API developed with Spring Boot and Java. Implements JWT authentication, role authorization, JPA/Hibernate ORM, MySQL pooling, and containerized deployment.</p>
+          <div class="project-tags">
+            <span>Spring Boot</span><span>Java</span><span>MySQL</span><span>JWT</span><span>AWS</span>
+          </div>
+        </div>
+        <div class="project-links">
+          <a class="proj-action-btn" href="https://github.com/yashmishra11" target="_blank" rel="noopener">⚡ CODE</a>
+          <a class="proj-action-btn" href="https://github.com/yashmishra11" target="_blank" rel="noopener">◈ DOCS</a>
         </div>
       </div>
 
     </div>
-      <div class="divider">· · · ✦ · · · ◆ · · · ✦ · · ·</div>
-    
-  </div>
+    <div class="divider" aria-hidden="true">· · · ✦ · · · ◆ · · · ✦ · · ·</div>
+  </section>
+
+  <!-- ===== GUESTBOOK SECTION ===== -->
+  <section id="guestbook" class="full-section">
+    <div class="section-header">
+      <span>✎ indie web guestbook</span>
+      <span class="section-subtitle">LEAVE YOUR SIGNATURE</span>
+    </div>
+
+    <div class="guestbook-container">
+      
+      <!-- Guestbook Entries List -->
+      <div class="guestbook-entries-wrapper">
+        <div class="guestbook-header-small">
+          <span>◈ VISITOR LOGS</span>
+          <span id="guestbook-counter">3 ENTRIES</span>
+        </div>
+        <div class="entries-list" id="guestbook-entries">
+          <!-- Populated by JavaScript from localStorage with nostalgic defaults -->
+        </div>
+      </div>
+
+      <!-- Guestbook Submission Form -->
+      <div class="guestbook-form-wrapper">
+        <div class="guestbook-form-title">✦ SIGN THE GUESTBOOK</div>
+        <form class="guestbook-form" id="guestbook-form" onsubmit="handleGuestbookSubmit(event)">
+          <div class="form-group">
+            <label for="gb-name">YOUR HANDLE / ALIAS:</label>
+            <input type="text" id="gb-name" class="form-control" placeholder="e.g. @cyber_surfer" maxlength="25" required/>
+          </div>
+
+          <div class="form-group">
+            <label>PICK YOUR RETRO BADGE:</label>
+            <div class="badge-selector" id="badge-selector">
+              <button type="button" class="badge-option selected" data-icon="👾" title="Alien Invader">👾</button>
+              <button type="button" class="badge-option" data-icon="💾" title="Floppy Disk">💾</button>
+              <button type="button" class="badge-option" data-icon="🕹️" title="Arcade Joystick">🕹️</button>
+              <button type="button" class="badge-option" data-icon="☕" title="Coffee">☕</button>
+              <button type="button" class="badge-option" data-icon="🚀" title="Rocket">🚀</button>
+              <button type="button" class="badge-option" data-icon="✦" title="Indie Star">✦</button>
+              <button type="button" class="badge-option" data-icon="⭐" title="Gold Star">⭐</button>
+              <button type="button" class="badge-option" data-icon="🐱" title="Pixel Cat">🐱</button>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="gb-message">YOUR NOTE / GREETING:</label>
+            <textarea id="gb-message" class="form-control" placeholder="say hi or leave a message for the indie web..." maxlength="200" required></textarea>
+          </div>
+
+          <button type="submit" class="guestbook-submit-btn">SIGN GUESTBOOK ✦</button>
+          <div class="guestbook-status" id="guestbook-status"></div>
+        </form>
+      </div>
+
+    </div>
+
+    <div class="divider" aria-hidden="true">· · · ✦ · · · ◆ · · · ✦ · · ·</div>
+  </section>
 
   <!-- ===== CONTACT SECTION ===== -->
-  <div id="contact" class="full-section">
-    <div class="section-header">✉ contact me</div>
+  <section id="contact" class="full-section">
+    <div class="section-header">
+      <span>✉ contact coordinates</span>
+      <span class="section-subtitle">LET'S CONNECT</span>
+    </div>
+
     <div class="contact-grid">
 
+      <!-- Email Card -->
       <div class="contact-card">
-        <div class="contact-label">◈ email</div>
-        <a href="mailto:you@email.com">you@email.com</a>
+        <div>
+          <div class="contact-label">◈ email</div>
+          <a href="mailto:yashmishra.dev@gmail.com">yashmishra.dev@gmail.com</a>
+        </div>
+        <button class="copy-btn" onclick="copyText('yashmishra.dev@gmail.com', 'Email copied to clipboard!')">📋 COPY EMAIL</button>
       </div>
 
+      <!-- Phone Card -->
       <div class="contact-card">
-        <div class="contact-label">◈ phone</div>
-        <span>+91 8827895934</span>
+        <div>
+          <div class="contact-label">◈ phone</div>
+          <span>+91 8827895934</span>
+        </div>
+        <button class="copy-btn" onclick="copyText('+918827895934', 'Phone number copied!')">📋 COPY PHONE</button>
       </div>
 
+      <!-- GitHub Card -->
       <div class="contact-card">
-        <div class="contact-label">◈ github</div>
-        <a href="https://github.com/yashmishra11" target="_blank">github.com/yashmishra</a>
+        <div>
+          <div class="contact-label">◈ github</div>
+          <a href="https://github.com/yashmishra11" target="_blank" rel="noopener">github.com/yashmishra11</a>
+        </div>
+        <a class="copy-btn" href="https://github.com/yashmishra11" target="_blank" rel="noopener">↗ VISIT GITHUB</a>
       </div>
 
+      <!-- LinkedIn Card -->
       <div class="contact-card">
-        <div class="contact-label">◈ linkedin</div>
-        <a href="https://linkedin.com/in/yashmishra" target="_blank">linkedin.com/in/yashmishra</a>
+        <div>
+          <div class="contact-label">◈ linkedin</div>
+          <a href="https://linkedin.com/in/yashmishra" target="_blank" rel="noopener">linkedin.com/in/yashmishra</a>
+        </div>
+        <a class="copy-btn" href="https://linkedin.com/in/yashmishra" target="_blank" rel="noopener">↗ VISIT PROFILE</a>
       </div>
 
+      <!-- Location Card -->
       <div class="contact-card">
-        <div class="contact-label">◈ location</div>
-        <span>Bilaspur, Chhattisgarh 🇮🇳</span>
+        <div>
+          <div class="contact-label">◈ coordinates</div>
+          <span>Bilaspur, Chhattisgarh, India 🇮🇳</span>
+        </div>
+        <span style="font-size:0.85rem; color:var(--muted); margin-top:6px;">Timezone: IST (UTC+05:30)</span>
       </div>
 
+      <!-- Resume / CV Card -->
       <div class="contact-card">
-        <div class="contact-label">◈ resume</div>
-        <a href="Yash_Mishra.pdf" target="_blank">download cv ↓</a>
+        <div>
+          <div class="contact-label">◈ curriculum vitae</div>
+          <a href="javascript:void(0)" onclick="openResumeModal()">view cv / resume summary ↓</a>
+        </div>
+        <button class="copy-btn" onclick="openResumeModal()">⚡ OPEN CV VIEWER</button>
       </div>
 
     </div>
-          <div class="divider">· · · ✦ · · · ◆ · · · ✦ · · ·</div>
 
+    <div class="divider" aria-hidden="true">· · · ✦ · · · ◆ · · · ✦ · · ·</div>
+  </section>
+
+  <!-- ===== RESUME RETRO MODAL ===== -->
+  <div id="resume-modal" class="modal-backdrop" onclick="closeResumeModal(event)">
+    <div class="modal-window" onclick="event.stopPropagation()">
+      <div class="modal-titlebar">
+        <span>YASH_MISHRA_RESUME.TXT</span>
+        <button class="modal-close-btn" onclick="closeResumeModal()" title="Close CV">✕</button>
+      </div>
+      <div class="modal-body">
+        <h2 style="font-family:'Press Start 2P', monospace; font-size:0.8rem; color:var(--accent); margin-bottom:8px;">YASH MISHRA</h2>
+        <p style="color:var(--gold);">Full-Stack Web Developer | B.Tech Computer Science (2022 - 2026)</p>
+        <p style="color:var(--muted); font-size:0.9rem;">Bilaspur, Chhattisgarh, India · yashmishra.dev@gmail.com · +91 8827895934</p>
+
+        <h3>◈ EDUCATION</h3>
+        <p><strong>Bachelor of Technology in Computer Science &amp; Engineering</strong></p>
+        <p style="color:var(--muted);">Graduation: June 2026</p>
+
+        <h3>◈ CORE TECHNICAL SKILLS</h3>
+        <p><strong>Languages:</strong> Java, JavaScript (ES6+), TypeScript, PHP, Python, SQL</p>
+        <p><strong>Frontend:</strong> React.js, Next.js, HTML5, CSS3/TailwindCSS, Responsive UI/UX</p>
+        <p><strong>Backend:</strong> Node.js, Express, Spring Boot, RESTful APIs, MVC Architecture</p>
+        <p><strong>Databases:</strong> MySQL, MongoDB, Firebase Firestore</p>
+        <p><strong>DevOps &amp; Tools:</strong> Git, GitHub, AWS, Vercel, Postman, Vite</p>
+
+        <h3>◈ SELECTED PROJECTS</h3>
+        <p><strong>1. Blog-Mongo Full Stack:</strong> Multi-user blogging platform using React, TypeScript, Material UI, Node.js &amp; MongoDB.</p>
+        <p><strong>2. TodoList – React:</strong> Productivity suite with Firebase auth &amp; real-time Firestore sync.</p>
+        <p><strong>3. CMS – SECL Enterprise:</strong> Enterprise complaint tracking system with PHP MVC &amp; MySQL security schemas.</p>
+        <p><strong>4. Pokédex &amp; Anime REST Platforms:</strong> Modular React web applications with real-time API integrations.</p>
+      </div>
+      <div class="modal-footer">
+        <button class="retro-pill-btn" onclick="window.print()">🖨️ PRINT / PDF</button>
+        <button class="retro-pill-btn active" onclick="closeResumeModal()">CLOSE [ESC]</button>
+      </div>
+    </div>
   </div>
+
+  <!-- TOAST NOTIFICATION CONTAINER -->
+  <div id="toast-container"></div>
 
   <!-- FOOTER -->
-  <div id="footer">
-    <p>✦ Yash Mishra · made with ♥ · hosted on neocities ✦</p>
-    <p class="footer-sub">best viewed at 1024px · est. 2025</p>
-  </div>
+  <footer id="footer">
+    <p class="footer-tagline">✦ Yash Mishra · handcrafted with ♥ · hosted on neocities ✦</p>
+    <p class="footer-sub">best viewed on any screen · no cookies · est. 2025 · updated 2026</p>
+    <div class="footer-hint" onclick="triggerPartyMode()">
+      [ 👾 KONAMI CODE: ↑ ↑ ↓ ↓ ← → ← → B A OR CLICK HERE ]
+    </div>
+  </footer>
 
+  <!-- ===== JAVASCRIPT LOGIC ===== -->
   <script>
+    /* ==========================================================================
+       1. WEB AUDIO API CHIPTUNE SYNTHESIZER & SOUND FX
+       ========================================================================== */
+    let audioCtx = null;
+    let sfxEnabled = true;
+
+    function getAudioCtx() {
+      if (!audioCtx) {
+        const AudioContext = window.AudioContext || window.webkitAudioContext;
+        if (AudioContext) audioCtx = new AudioContext();
+      }
+      if (audioCtx && audioCtx.state === 'suspended') {
+        audioCtx.resume();
+      }
+      return audioCtx;
+    }
+
+    function playBeep(freq = 440, type = 'square', duration = 0.08) {
+      if (!sfxEnabled) return;
+      try {
+        const ctx = getAudioCtx();
+        if (!ctx) return;
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc.type = type;
+        osc.frequency.setValueAtTime(freq, ctx.currentTime);
+        gain.gain.setValueAtTime(0.08, ctx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + duration);
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+        osc.start();
+        osc.stop(ctx.currentTime + duration);
+      } catch (e) {}
+    }
+
+    function playSuccessJingle() {
+      if (!sfxEnabled) return;
+      playBeep(330, 'square', 0.08);
+      setTimeout(() => playBeep(440, 'square', 0.08), 80);
+      setTimeout(() => playBeep(554, 'square', 0.08), 160);
+      setTimeout(() => playBeep(659, 'square', 0.15), 240);
+    }
+
+    /* ==========================================================================
+       2. MULTI-TRACK AUDIO PLAYER
+       ========================================================================== */
+    const playlist = [
+      {
+        title: "Snake Eater",
+        artist: "Cynthia Harrell (MGS3)",
+        url: "https://archive.org/download/snake-eater-cynthia-harrell/SNAKE%20EATER%20-%20Cynthia%20Harrell.mp3",
+        isSynth: false
+      },
+      {
+        title: "Resurrections (Chiptune)",
+        artist: "Lena Raine (Celeste Chiptune)",
+        url: "https://archive.org/download/celeste-ost-chiptune-piano-resurrections/Lena%20Raine%20-%20Celeste%20Original%20Soundtrack%20-%2003%20Resurrections.mp3",
+        isSynth: false
+      },
+      {
+        title: "8-Bit Nostalgia Synth",
+        artist: "Web Audio Chiptune Loop",
+        url: "",
+        isSynth: true
+      }
+    ];
+
+    let currentTrackIdx = 0;
+    let synthInterval = null;
+    let synthNoteIdx = 0;
+
     const audio = document.getElementById('audio');
     const playBtn = document.getElementById('play-btn');
+    const muteBtn = document.getElementById('mute-btn');
     const fill = document.getElementById('progress-fill');
     const currentTimeEl = document.getElementById('current-time');
     const durationEl = document.getElementById('duration');
+    const titleEl = document.getElementById('player-title');
+    const artistEl = document.getElementById('player-artist');
+    const trackIndexEl = document.getElementById('track-index');
+    const statusSongEl = document.getElementById('status-song-name');
+    const playerBox = document.getElementById('player');
 
-    function fmt(s) {
-      if (isNaN(s)) return '0:00';
+    function formatTime(s) {
+      if (isNaN(s) || s < 0) return '0:00';
       const m = Math.floor(s / 60);
       const sec = Math.floor(s % 60);
       return m + ':' + (sec < 10 ? '0' : '') + sec;
     }
-    audio.addEventListener('loadedmetadata', () => { durationEl.textContent = fmt(audio.duration); });
+
+    function loadTrack(idx) {
+      currentTrackIdx = idx;
+      const track = playlist[currentTrackIdx];
+      titleEl.textContent = track.title;
+      artistEl.textContent = track.artist;
+      trackIndexEl.textContent = `${idx + 1} / ${playlist.length}`;
+      statusSongEl.textContent = track.title;
+
+      stopSynthLoop();
+      if (!track.isSynth) {
+        audio.src = track.url;
+        audio.load();
+      } else {
+        audio.removeAttribute('src');
+        currentTimeEl.textContent = "0:00";
+        durationEl.textContent = "LOOP";
+        fill.style.width = "100%";
+      }
+    }
+
+    function startSynthLoop() {
+      stopSynthLoop();
+      const notes = [261.63, 329.63, 392.00, 523.25, 440.00, 349.23, 392.00, 329.63];
+      synthNoteIdx = 0;
+      synthInterval = setInterval(() => {
+        playBeep(notes[synthNoteIdx % notes.length], 'triangle', 0.12);
+        synthNoteIdx++;
+      }, 160);
+    }
+
+    function stopSynthLoop() {
+      if (synthInterval) {
+        clearInterval(synthInterval);
+        synthInterval = null;
+      }
+    }
+
+    function togglePlay() {
+      const track = playlist[currentTrackIdx];
+      if (track.isSynth) {
+        if (synthInterval) {
+          stopSynthLoop();
+          playBtn.textContent = '▶';
+          playerBox.classList.remove('playing');
+        } else {
+          startSynthLoop();
+          playBtn.textContent = '⏸';
+          playerBox.classList.add('playing');
+        }
+        return;
+      }
+
+      if (audio.paused) {
+        audio.play().then(() => {
+          playBtn.textContent = '⏸';
+          playerBox.classList.add('playing');
+        }).catch(err => {
+          // Fallback to synth if external audio blocked by network
+          showToast("Network audio blocked, playing retro synth!");
+          currentTrackIdx = 2;
+          loadTrack(2);
+          togglePlay();
+        });
+      } else {
+        audio.pause();
+        playBtn.textContent = '▶';
+        playerBox.classList.remove('playing');
+      }
+    }
+
+    function audioPrev() {
+      playBeep(280, 'square', 0.05);
+      currentTrackIdx = (currentTrackIdx - 1 + playlist.length) % playlist.length;
+      loadTrack(currentTrackIdx);
+      if (playerBox.classList.contains('playing')) {
+        togglePlay();
+      }
+    }
+
+    function audioNext() {
+      playBeep(480, 'square', 0.05);
+      currentTrackIdx = (currentTrackIdx + 1) % playlist.length;
+      loadTrack(currentTrackIdx);
+      if (playerBox.classList.contains('playing')) {
+        togglePlay();
+      }
+    }
+
+    function toggleMute() {
+      audio.muted = !audio.muted;
+      muteBtn.textContent = audio.muted ? '🔇' : '🔈';
+      playBeep(audio.muted ? 200 : 500, 'square', 0.04);
+    }
+
+    audio.addEventListener('loadedmetadata', () => {
+      durationEl.textContent = formatTime(audio.duration);
+    });
+
     audio.addEventListener('timeupdate', () => {
-      currentTimeEl.textContent = fmt(audio.currentTime);
+      currentTimeEl.textContent = formatTime(audio.currentTime);
       const pct = audio.duration ? (audio.currentTime / audio.duration) * 100 : 0;
       fill.style.width = pct + '%';
     });
-    function togglePlay() {
-      if (audio.paused) { audio.play(); playBtn.textContent = '⏸'; }
-      else { audio.pause(); playBtn.textContent = '▶'; }
-    }
-    function audioRestart() { audio.currentTime = 0; audio.play(); playBtn.textContent = '⏸'; }
-    function audioSkip() { audio.currentTime = Math.min(audio.currentTime + 10, audio.duration); }
-    document.getElementById('progress-bar').addEventListener('click', function(e) {
-      const rect = this.getBoundingClientRect();
-      audio.currentTime = ((e.clientX - rect.left) / rect.width) * audio.duration;
+
+    audio.addEventListener('ended', () => {
+      audioNext();
     });
+
+    document.getElementById('progress-bar').addEventListener('click', function(e) {
+      if (playlist[currentTrackIdx].isSynth) return;
+      const rect = this.getBoundingClientRect();
+      const clickRatio = (e.clientX - rect.left) / rect.width;
+      audio.currentTime = clickRatio * (audio.duration || 0);
+    });
+
+    // Initialize first track
+    loadTrack(0);
+
+    /* ==========================================================================
+       3. RETRO CONTROLS (CRT, SFX, PARTY MODE)
+       ========================================================================== */
+    const crtBtn = document.getElementById('crt-toggle-btn');
+    const sfxBtn = document.getElementById('sfx-toggle-btn');
+    const partyBtn = document.getElementById('party-toggle-btn');
+
+    // CRT persistence
+    const savedCrt = localStorage.getItem('indie_crt');
+    if (savedCrt === 'off') {
+      document.body.classList.add('crt-off');
+      crtBtn.textContent = '📺 CRT: OFF';
+    }
+
+    crtBtn.addEventListener('click', () => {
+      const isOff = document.body.classList.toggle('crt-off');
+      crtBtn.textContent = isOff ? '📺 CRT: OFF' : '📺 CRT: ON';
+      localStorage.setItem('indie_crt', isOff ? 'off' : 'on');
+      playBeep(isOff ? 220 : 660, 'sawtooth', 0.06);
+      showToast(isOff ? "CRT Scanlines: Disabled" : "CRT Scanlines: Enabled");
+    });
+
+    sfxBtn.addEventListener('click', () => {
+      sfxEnabled = !sfxEnabled;
+      sfxBtn.textContent = sfxEnabled ? '♫ SFX: ON' : '♫ SFX: OFF';
+      if (sfxEnabled) playBeep(600, 'square', 0.06);
+      showToast(sfxEnabled ? "8-Bit Sound FX: ON" : "8-Bit Sound FX: OFF");
+    });
+
+    function triggerPartyMode() {
+      const isParty = document.body.classList.toggle('party-mode');
+      partyBtn.classList.toggle('active', isParty);
+      playSuccessJingle();
+      showToast(isParty ? "👾 CYBER ARCADE PARTY MODE ACTIVE!" : "Retro normal mode restored");
+    }
+    partyBtn.addEventListener('click', triggerPartyMode);
+
+    /* ==========================================================================
+       4. KONAMI CODE EASTER EGG (↑ ↑ ↓ ↓ ← → ← → B A)
+       ========================================================================== */
+    const konamiCode = ['ArrowUp','ArrowUp','ArrowDown','ArrowDown','ArrowLeft','ArrowRight','ArrowLeft','ArrowRight','b','a'];
+    let konamiIndex = 0;
+
+    window.addEventListener('keydown', (e) => {
+      const key = e.key.length === 1 ? e.key.toLowerCase() : e.key;
+      if (key === konamiCode[konamiIndex] || key === konamiCode[konamiIndex].toLowerCase()) {
+        konamiIndex++;
+        playBeep(300 + (konamiIndex * 60), 'square', 0.04);
+        if (konamiIndex === konamiCode.length) {
+          triggerPartyMode();
+          showToast("★ ACHIEVEMENT UNLOCKED: 1986 KONAMI SURFER! ★");
+          konamiIndex = 0;
+        }
+      } else {
+        konamiIndex = 0;
+      }
+    });
+
+    /* ==========================================================================
+       5. DEVLOG FILTERING
+       ========================================================================== */
+    function filterLogs(category) {
+      playBeep(450, 'square', 0.03);
+      const buttons = document.querySelectorAll('.devlog-filters .filter-btn');
+      buttons.forEach(b => b.classList.remove('active'));
+      event.target.classList.add('active');
+
+      const items = document.querySelectorAll('#devlog-entries .devlog-item');
+      items.forEach(item => {
+        if (category === 'all' || item.dataset.category === category) {
+          item.style.display = 'block';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    }
+
+    /* ==========================================================================
+       6. PROJECT FILTERING
+       ========================================================================== */
+    function filterProjects(filter) {
+      playBeep(520, 'square', 0.04);
+      const buttons = document.querySelectorAll('.proj-filter-btn');
+      buttons.forEach(b => b.classList.remove('active'));
+      event.target.classList.add('active');
+
+      const cards = document.querySelectorAll('.projects-grid .project-card');
+      let visible = 0;
+      cards.forEach(card => {
+        const cats = card.dataset.cat.split(' ');
+        if (filter === 'all' || cats.includes(filter)) {
+          card.classList.remove('hidden');
+          visible++;
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+      document.getElementById('project-count-display').textContent = `SHOWING ${visible} OF ${cards.length} PROJECTS`;
+    }
+
+    /* ==========================================================================
+       7. INTERACTIVE GUESTBOOK (LOCAL STORAGE PERSISTENCE)
+       ========================================================================== */
+    const initialGuestbook = [
+      {
+        name: "@retro_surfer",
+        badge: "👾",
+        date: "09/20/26",
+        message: "Stumbled across your corner while surfing the Neocities webring! The Metal Gear Snake Eater track is an instant 10/10."
+      },
+      {
+        name: "@cyber_pixel",
+        badge: "💾",
+        date: "08/14/26",
+        message: "Clean VT323 styling! Reminds me of late 90s personal web rings. Keep building cool stuff."
+      },
+      {
+        name: "@dev_wanderer",
+        badge: "☕",
+        date: "07/02/26",
+        message: "Solid project stack. Love that you balanced React with Spring Boot and genuine indie aesthetics."
+      }
+    ];
+
+    let selectedBadge = "👾";
+
+    // Set up badge selector buttons
+    document.querySelectorAll('.badge-option').forEach(btn => {
+      btn.addEventListener('click', function() {
+        playBeep(500, 'square', 0.03);
+        document.querySelectorAll('.badge-option').forEach(b => b.classList.remove('selected'));
+        this.classList.add('selected');
+        selectedBadge = this.dataset.icon;
+      });
+    });
+
+    function getGuestbookEntries() {
+      const stored = localStorage.getItem('indie_guestbook_entries');
+      if (stored) {
+        try {
+          return JSON.parse(stored);
+        } catch (e) {
+          return initialGuestbook;
+        }
+      }
+      return initialGuestbook;
+    }
+
+    function renderGuestbook() {
+      const entries = getGuestbookEntries();
+      const container = document.getElementById('guestbook-entries');
+      const counter = document.getElementById('guestbook-counter');
+      counter.textContent = `${entries.length} ENTRIES`;
+
+      container.innerHTML = entries.map(entry => `
+        <div class="guestbook-card">
+          <div class="guest-header">
+            <span class="guest-name"><span class="guest-badge">${escapeHtml(entry.badge || '✦')}</span> ${escapeHtml(entry.name)}</span>
+            <span class="guest-date">${escapeHtml(entry.date)}</span>
+          </div>
+          <p class="guest-msg">${escapeHtml(entry.message)}</p>
+        </div>
+      `).join('');
+    }
+
+    function handleGuestbookSubmit(e) {
+      e.preventDefault();
+      const nameInput = document.getElementById('gb-name');
+      const msgInput = document.getElementById('gb-message');
+      const statusEl = document.getElementById('guestbook-status');
+
+      const name = nameInput.value.trim();
+      const msg = msgInput.value.trim();
+
+      if (!name || !msg) return;
+
+      const now = new Date();
+      const dateStr = `${String(now.getMonth()+1).padStart(2,'0')}/${String(now.getDate()).padStart(2,'0')}/${String(now.getFullYear()).slice(-2)}`;
+
+      const newEntry = {
+        name: name.startsWith('@') ? name : '@' + name,
+        badge: selectedBadge,
+        date: dateStr,
+        message: msg
+      };
+
+      const entries = getGuestbookEntries();
+      entries.unshift(newEntry);
+      localStorage.setItem('indie_guestbook_entries', JSON.stringify(entries));
+
+      renderGuestbook();
+      playSuccessJingle();
+
+      nameInput.value = '';
+      msgInput.value = '';
+      statusEl.textContent = "✦ SIGNATURE RECORDED! WELCOME TO THE ARCHIVE.";
+      showToast("Guestbook signed successfully! ✦");
+
+      setTimeout(() => {
+        statusEl.textContent = '';
+      }, 4000);
+    }
+
+    function escapeHtml(str) {
+      const div = document.createElement('div');
+      div.textContent = str;
+      return div.innerHTML;
+    }
+
+    renderGuestbook();
+
+    /* ==========================================================================
+       8. UTILITY: COPY TO CLIPBOARD & TOASTS
+       ========================================================================== */
+    function showToast(message) {
+      const container = document.getElementById('toast-container');
+      const toast = document.createElement('div');
+      toast.className = 'toast';
+      toast.textContent = message;
+      container.appendChild(toast);
+
+      setTimeout(() => {
+        toast.style.opacity = '0';
+        toast.style.transition = 'opacity 0.3s ease';
+        setTimeout(() => toast.remove(), 300);
+      }, 3200);
+    }
+
+    function copyText(text, successMsg) {
+      navigator.clipboard.writeText(text).then(() => {
+        playSuccessJingle();
+        showToast(successMsg || "Copied to clipboard!");
+      }).catch(() => {
+        showToast("Press Ctrl+C to copy: " + text);
+      });
+    }
+
+    /* ==========================================================================
+       9. RESUME MODAL
+       ========================================================================== */
+    const resumeModal = document.getElementById('resume-modal');
+
+    function openResumeModal() {
+      playBeep(480, 'square', 0.05);
+      resumeModal.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeResumeModal(e) {
+      playBeep(320, 'square', 0.04);
+      resumeModal.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && resumeModal.classList.contains('open')) {
+        closeResumeModal();
+      }
+    });
+
+    console.log("%c✦ YASH MISHRA INDIE WEB STATION LOADED ✦", "color: #7eb8c8; font-size: 14px; font-weight: bold; background: #0a0a0f; padding: 4px;");
   </script>
 </body>
 </html>

@@ -95,23 +95,16 @@
           <p>mood: <span class="accent">nostalgic &amp; focused</span></p>
           <p>playing: <span class="accent" id="status-song-name">Snake Eater</span></p>
 
-          <!-- ENHANCED RETRO MUSIC PLAYER -->
+          <!-- CLEAN RETRO AUDIO PLAYER -->
           <div id="player">
             <div id="player-screen">
-              <div class="player-screen-top">
-                <span id="player-label">♫ RETRO CHIPTUNE</span>
-                <span id="track-index">1 / 3</span>
+              <div class="player-top-line">
+                <span class="player-label">♫ RETRO PLAYER</span>
+                <span class="track-badge" id="track-index">1 / 4</span>
               </div>
+              
               <div id="player-title">Snake Eater</div>
               <div id="player-artist">Cynthia Harrell (MGS3)</div>
-              
-              <div id="player-time">
-                <span id="current-time">0:00</span>
-                <div id="progress-bar" title="Click to seek">
-                  <div id="progress-fill"></div>
-                </div>
-                <span id="duration">0:00</span>
-              </div>
 
               <!-- Animated Equalizer Bars -->
               <div id="equalizer" aria-hidden="true">
@@ -120,16 +113,27 @@
                 <div class="eq-bar"></div>
                 <div class="eq-bar"></div>
                 <div class="eq-bar"></div>
+                <div class="eq-bar"></div>
+                <div class="eq-bar"></div>
+              </div>
+
+              <!-- Time & Seek Bar -->
+              <div id="player-time">
+                <span id="current-time">0:00</span>
+                <div id="progress-bar" title="Click to seek">
+                  <div id="progress-fill"></div>
+                </div>
+                <span id="duration">3:45</span>
               </div>
             </div>
 
+            <!-- Simple 4-Button Controls -->
             <div id="player-controls">
-              <button onclick="audioPrev()" title="Previous Track">⏮</button>
-              <button id="play-btn" onclick="togglePlay()" title="Play / Pause">▶</button>
-              <button onclick="audioNext()" title="Next Track">⏭</button>
-              <button id="mute-btn" onclick="toggleMute()" title="Mute audio">🔈</button>
+              <button type="button" onclick="audioPrev()" title="Previous Track [Left Arrow]">⏮</button>
+              <button type="button" id="play-btn" onclick="togglePlay()" title="Play / Pause [Space]">▶</button>
+              <button type="button" onclick="audioNext()" title="Next Track [Right Arrow]">⏭</button>
+              <button type="button" id="mute-btn" onclick="toggleMute()" title="Mute [M]">🔈</button>
             </div>
-            <div class="player-subinfo">✦ click play to listen ✦</div>
           </div>
 
           <!-- AUDIO ELEMENT -->
@@ -192,6 +196,103 @@
           <li>⬥ chiptune music, pixel art &amp; retro game development</li>
           <li>⬥ fresh roast coffee &amp; tech literature</li>
         </ul>
+      </div>
+
+      <div class="divider" aria-hidden="true">· · · ✦ · · · ◆ · · · ✦ · · ·</div>
+
+      <!-- Favorite Games Box -->
+      <div class="box" id="games">
+        <div class="box-title">
+          <span>🎮 games i play</span>
+          <span class="badge">7 TITLES</span>
+        </div>
+        <div class="games-shelf">
+
+          <!-- 1. Sekiro -->
+          <div class="game-card">
+            <div class="game-left">
+              <span class="game-icon">⚔️</span>
+              <div class="game-info">
+                <div class="game-title">Sekiro: Shadows Die Twice</div>
+                <span class="game-genre">Action / FromSoftware</span>
+              </div>
+            </div>
+            <span class="game-tag">GOTY</span>
+          </div>
+
+          <!-- 2. Summertime Saga -->
+          <div class="game-card">
+            <div class="game-left">
+              <span class="game-icon">📖</span>
+              <div class="game-info">
+                <div class="game-title">Summertime Saga</div>
+                <span class="game-genre">Visual Novel / Life Sim</span>
+              </div>
+            </div>
+            <span class="game-tag">STORY</span>
+          </div>
+
+          <!-- 3. CK3 -->
+          <div class="game-card">
+            <div class="game-left">
+              <span class="game-icon">👑</span>
+              <div class="game-info">
+                <div class="game-title">Crusader Kings III (CK3)</div>
+                <span class="game-genre">Grand Strategy / Paradox</span>
+              </div>
+            </div>
+            <span class="game-tag">DYNASTY</span>
+          </div>
+
+          <!-- 4. DS Remastered -->
+          <div class="game-card">
+            <div class="game-left">
+              <span class="game-icon">💀</span>
+              <div class="game-info">
+                <div class="game-title">Dark Souls Remastered</div>
+                <span class="game-genre">Action RPG / Lordran</span>
+              </div>
+            </div>
+            <span class="game-tag">CLASSIC</span>
+          </div>
+
+          <!-- 5. Stardew Valley -->
+          <div class="game-card">
+            <div class="game-left">
+              <span class="game-icon">🌾</span>
+              <div class="game-info">
+                <div class="game-title">Stardew Valley</div>
+                <span class="game-genre">Farming / Cozy Sim</span>
+              </div>
+            </div>
+            <span class="game-tag">COZY</span>
+          </div>
+
+          <!-- 6. Minecraft -->
+          <div class="game-card">
+            <div class="game-left">
+              <span class="game-icon">⛏️</span>
+              <div class="game-info">
+                <div class="game-title">Minecraft</div>
+                <span class="game-genre">Sandbox / Survival</span>
+              </div>
+            </div>
+            <span class="game-tag">BLOCKS</span>
+          </div>
+
+          <!-- 7. Half-Life 2 -->
+          <div class="game-card">
+            <div class="game-left">
+              <span class="game-icon">🧪</span>
+              <div class="game-info">
+                <div class="game-title">Half-Life 2 (HL2)</div>
+                <span class="game-genre">Sci-Fi FPS / Valve</span>
+              </div>
+            </div>
+            <span class="game-tag">LEGEND</span>
+          </div>
+
+        </div>
       </div>
 
       <div class="divider" aria-hidden="true">· · · ✦ · · · ◆ · · · ✦ · · ·</div>
@@ -720,44 +821,64 @@
     }
 
     /* ==========================================================================
-       2. MULTI-TRACK AUDIO PLAYER
+       2. CLEAN RETRO AUDIO PLAYER ENGINE
        ========================================================================== */
     const playlist = [
       {
         title: "Snake Eater",
         artist: "Cynthia Harrell (MGS3)",
+        durationSec: 225,
         url: "https://archive.org/download/snake-eater-cynthia-harrell/SNAKE%20EATER%20-%20Cynthia%20Harrell.mp3",
         isSynth: false
       },
       {
-        title: "Resurrections (Chiptune)",
-        artist: "Lena Raine (Celeste Chiptune)",
-        url: "https://archive.org/download/celeste-ost-chiptune-piano-resurrections/Lena%20Raine%20-%20Celeste%20Original%20Soundtrack%20-%2003%20Resurrections.mp3",
-        isSynth: false
+        title: "Cyber Dreams",
+        artist: "8-Bit Retro Synthwave",
+        durationSec: 180,
+        url: "",
+        isSynth: true,
+        synthMode: "synthwave"
       },
       {
-        title: "8-Bit Nostalgia Synth",
-        artist: "Web Audio Chiptune Loop",
+        title: "Lavender Memories",
+        artist: "Game Boy Chiptune Tribute",
+        durationSec: 154,
         url: "",
-        isSynth: true
+        isSynth: true,
+        synthMode: "lavender"
+      },
+      {
+        title: "Midnight Deck",
+        artist: "Analog FM Chillpad",
+        durationSec: 210,
+        url: "",
+        isSynth: true,
+        synthMode: "lofi"
       }
     ];
 
     let currentTrackIdx = 0;
-    let synthInterval = null;
-    let synthNoteIdx = 0;
+    let isPlaying = false;
+    let isMuted = false;
 
+    // DOM Elements
     const audio = document.getElementById('audio');
+    const playerEl = document.getElementById('player');
     const playBtn = document.getElementById('play-btn');
     const muteBtn = document.getElementById('mute-btn');
-    const fill = document.getElementById('progress-fill');
+    const progressBar = document.getElementById('progress-bar');
+    const progressFill = document.getElementById('progress-fill');
     const currentTimeEl = document.getElementById('current-time');
     const durationEl = document.getElementById('duration');
-    const titleEl = document.getElementById('player-title');
-    const artistEl = document.getElementById('player-artist');
+    const playerTitleEl = document.getElementById('player-title');
+    const playerArtistEl = document.getElementById('player-artist');
     const trackIndexEl = document.getElementById('track-index');
     const statusSongEl = document.getElementById('status-song-name');
-    const playerBox = document.getElementById('player');
+
+    // Web Audio Synthesizer State
+    let synthTimer = null;
+    let synthStep = 0;
+    let synthCurrentTime = 0;
 
     function formatTime(s) {
       if (isNaN(s) || s < 0) return '0:00';
@@ -766,98 +887,142 @@
       return m + ':' + (sec < 10 ? '0' : '') + sec;
     }
 
-    function loadTrack(idx) {
-      currentTrackIdx = idx;
+    const synthPatterns = {
+      synthwave: {
+        tempoMs: 140,
+        bass: [110, 110, 130.81, 110, 87.31, 87.31, 98, 98],
+        lead: [440, 523.25, 659.25, 587.33, 440, 493.88, 523.25, 659.25]
+      },
+      lavender: {
+        tempoMs: 170,
+        bass: [130.81, 0, 164.81, 0, 146.83, 0, 123.47, 0],
+        lead: [523.25, 587.33, 659.25, 783.99, 659.25, 523.25, 493.88, 440]
+      },
+      lofi: {
+        tempoMs: 220,
+        bass: [98, 0, 110, 0, 87.31, 0, 98, 0],
+        lead: [392.00, 440.00, 493.88, 440.00, 392.00, 329.63, 349.23, 392.00]
+      }
+    };
+
+    function startSynthPlayback() {
+      stopSynthPlayback();
       const track = playlist[currentTrackIdx];
-      titleEl.textContent = track.title;
-      artistEl.textContent = track.artist;
-      trackIndexEl.textContent = `${idx + 1} / ${playlist.length}`;
+      const pattern = synthPatterns[track.synthMode] || synthPatterns.synthwave;
+
+      synthTimer = setInterval(() => {
+        if (!isMuted) {
+          const step = synthStep % pattern.bass.length;
+          const b = pattern.bass[step];
+          const l = pattern.lead[step];
+          if (b > 0) playBeep(b, track.synthMode === 'lofi' ? 'triangle' : 'square', 0.12);
+          if (l > 0) playBeep(l, 'square', 0.18);
+        }
+
+        synthStep++;
+        synthCurrentTime += (pattern.tempoMs / 1000);
+
+        currentTimeEl.textContent = formatTime(synthCurrentTime);
+        const dur = track.durationSec;
+        const pct = Math.min((synthCurrentTime / dur) * 100, 100);
+        progressFill.style.width = pct + '%';
+
+        if (synthCurrentTime >= dur) {
+          audioNext();
+        }
+      }, pattern.tempoMs);
+    }
+
+    function stopSynthPlayback() {
+      if (synthTimer) {
+        clearInterval(synthTimer);
+        synthTimer = null;
+      }
+    }
+
+    function loadTrack(idx) {
+      currentTrackIdx = (idx + playlist.length) % playlist.length;
+      const track = playlist[currentTrackIdx];
+
+      playerTitleEl.textContent = track.title;
+      playerArtistEl.textContent = track.artist;
+      trackIndexEl.textContent = `${currentTrackIdx + 1} / ${playlist.length}`;
       statusSongEl.textContent = track.title;
 
-      stopSynthLoop();
+      stopSynthPlayback();
+      synthCurrentTime = 0;
+
       if (!track.isSynth) {
         audio.src = track.url;
         audio.load();
+        durationEl.textContent = formatTime(track.durationSec);
       } else {
         audio.removeAttribute('src');
-        currentTimeEl.textContent = "0:00";
-        durationEl.textContent = "LOOP";
-        fill.style.width = "100%";
+        durationEl.textContent = formatTime(track.durationSec);
       }
-    }
 
-    function startSynthLoop() {
-      stopSynthLoop();
-      const notes = [261.63, 329.63, 392.00, 523.25, 440.00, 349.23, 392.00, 329.63];
-      synthNoteIdx = 0;
-      synthInterval = setInterval(() => {
-        playBeep(notes[synthNoteIdx % notes.length], 'triangle', 0.12);
-        synthNoteIdx++;
-      }, 160);
-    }
-
-    function stopSynthLoop() {
-      if (synthInterval) {
-        clearInterval(synthInterval);
-        synthInterval = null;
-      }
+      currentTimeEl.textContent = '0:00';
+      progressFill.style.width = '0%';
     }
 
     function togglePlay() {
       const track = playlist[currentTrackIdx];
-      if (track.isSynth) {
-        if (synthInterval) {
-          stopSynthLoop();
-          playBtn.textContent = '▶';
-          playerBox.classList.remove('playing');
+      if (isPlaying) {
+        // Pause
+        if (!track.isSynth) {
+          audio.pause();
         } else {
-          startSynthLoop();
-          playBtn.textContent = '⏸';
-          playerBox.classList.add('playing');
+          stopSynthPlayback();
         }
-        return;
-      }
-
-      if (audio.paused) {
-        audio.play().then(() => {
-          playBtn.textContent = '⏸';
-          playerBox.classList.add('playing');
-        }).catch(err => {
-          // Fallback to synth if external audio blocked by network
-          showToast("Network audio blocked, playing retro synth!");
-          currentTrackIdx = 2;
-          loadTrack(2);
-          togglePlay();
-        });
-      } else {
-        audio.pause();
+        isPlaying = false;
         playBtn.textContent = '▶';
-        playerBox.classList.remove('playing');
+        playerEl.classList.remove('playing');
+      } else {
+        // Play
+        if (!track.isSynth) {
+          audio.play().then(() => {
+            isPlaying = true;
+            playBtn.textContent = '⏸';
+            playerEl.classList.add('playing');
+          }).catch(err => {
+            showToast("Network stream blocked: Playing 8-Bit Synth!");
+            currentTrackIdx = 1;
+            loadTrack(1);
+            togglePlay();
+          });
+        } else {
+          startSynthPlayback();
+          isPlaying = true;
+          playBtn.textContent = '⏸';
+          playerEl.classList.add('playing');
+        }
       }
     }
 
     function audioPrev() {
-      playBeep(280, 'square', 0.05);
-      currentTrackIdx = (currentTrackIdx - 1 + playlist.length) % playlist.length;
-      loadTrack(currentTrackIdx);
-      if (playerBox.classList.contains('playing')) {
+      playBeep(320, 'square', 0.04);
+      loadTrack(currentTrackIdx - 1);
+      if (isPlaying) {
+        isPlaying = false;
         togglePlay();
       }
     }
 
     function audioNext() {
-      playBeep(480, 'square', 0.05);
-      currentTrackIdx = (currentTrackIdx + 1) % playlist.length;
-      loadTrack(currentTrackIdx);
-      if (playerBox.classList.contains('playing')) {
+      playBeep(480, 'square', 0.04);
+      loadTrack(currentTrackIdx + 1);
+      if (isPlaying) {
+        isPlaying = false;
         togglePlay();
       }
     }
 
     function toggleMute() {
-      audio.muted = !audio.muted;
-      muteBtn.textContent = audio.muted ? '🔇' : '🔈';
-      playBeep(audio.muted ? 200 : 500, 'square', 0.04);
+      isMuted = !isMuted;
+      audio.muted = isMuted;
+      muteBtn.textContent = isMuted ? '🔇' : '🔈';
+      playBeep(isMuted ? 200 : 500, 'square', 0.04);
+      showToast(isMuted ? "Audio Muted" : "Audio Unmuted");
     }
 
     audio.addEventListener('loadedmetadata', () => {
@@ -865,23 +1030,43 @@
     });
 
     audio.addEventListener('timeupdate', () => {
+      if (playlist[currentTrackIdx].isSynth) return;
       currentTimeEl.textContent = formatTime(audio.currentTime);
       const pct = audio.duration ? (audio.currentTime / audio.duration) * 100 : 0;
-      fill.style.width = pct + '%';
+      progressFill.style.width = pct + '%';
     });
 
     audio.addEventListener('ended', () => {
       audioNext();
     });
 
-    document.getElementById('progress-bar').addEventListener('click', function(e) {
-      if (playlist[currentTrackIdx].isSynth) return;
+    progressBar.addEventListener('click', function(e) {
       const rect = this.getBoundingClientRect();
       const clickRatio = (e.clientX - rect.left) / rect.width;
-      audio.currentTime = clickRatio * (audio.duration || 0);
+      const track = playlist[currentTrackIdx];
+
+      playBeep(400, 'square', 0.03);
+      if (!track.isSynth) {
+        if (audio.duration) {
+          audio.currentTime = clickRatio * audio.duration;
+        }
+      } else {
+        synthCurrentTime = clickRatio * track.durationSec;
+        currentTimeEl.textContent = formatTime(synthCurrentTime);
+        progressFill.style.width = (clickRatio * 100) + '%';
+      }
     });
 
-    // Initialize first track
+    // Spacebar to Play/Pause
+    window.addEventListener('keydown', (e) => {
+      if (['INPUT', 'TEXTAREA'].includes(document.activeElement.tagName)) return;
+      if (e.code === 'Space') {
+        e.preventDefault();
+        togglePlay();
+      }
+    });
+
+    // Initialize player
     loadTrack(0);
 
     /* ==========================================================================

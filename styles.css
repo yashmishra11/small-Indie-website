@@ -339,61 +339,114 @@ a:hover {
   padding: 2px 4px;
 }
 
-/* ===== RETRO MUSIC PLAYER ===== */
+/* ===== CLEAN RETRO AUDIO PLAYER ===== */
 #player {
   margin-top: 10px;
   border: 1px solid var(--accent);
-  background: #050510;
+  background: #05060f;
   font-family: 'Press Start 2P', monospace;
   overflow: hidden;
-  box-shadow: 0 0 8px rgba(126, 184, 200, 0.15);
+  box-shadow: 0 0 10px rgba(126, 184, 200, 0.12);
+  transition: border-color 0.2s;
 }
+#player:hover {
+  border-color: var(--gold);
+}
+
+/* Screen */
 #player-screen {
-  background: #071320;
+  background: #07111c;
   border-bottom: 1px solid var(--accent);
-  padding: 7px 9px;
+  padding: 8px 10px 6px;
+  position: relative;
 }
-.player-screen-top {
+.player-top-line {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 4px;
 }
-#player-label {
+.player-label {
   font-size: 0.32rem;
   color: var(--accent);
   opacity: 0.8;
   letter-spacing: 0.08em;
 }
-#track-index {
+.track-badge {
   font-size: 0.3rem;
   color: var(--gold);
+  background: #0d2133;
+  padding: 1px 4px;
+  border: 1px solid #1a3f60;
 }
 #player-title {
-  font-size: 0.42rem;
+  font-size: 0.44rem;
   color: var(--title-fg);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   margin-bottom: 2px;
+  line-height: 1.4;
 }
 #player-artist {
   font-size: 0.34rem;
   color: var(--muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   margin-bottom: 6px;
 }
+
+/* Equalizer Bars */
+#equalizer {
+  display: flex;
+  align-items: flex-end;
+  gap: 3px;
+  height: 12px;
+  margin-bottom: 6px;
+  background: #040912;
+  padding: 2px 4px;
+  border: 1px solid #0d1e30;
+}
+.eq-bar {
+  flex: 1;
+  background: #173248;
+  height: 2px;
+  transition: height 0.15s ease, background 0.15s ease;
+}
+#player.playing .eq-bar:nth-child(1) { animation: eqAnim 0.45s infinite alternate ease-in-out; }
+#player.playing .eq-bar:nth-child(2) { animation: eqAnim 0.65s infinite alternate ease-in-out 0.1s; }
+#player.playing .eq-bar:nth-child(3) { animation: eqAnim 0.35s infinite alternate ease-in-out 0.2s; }
+#player.playing .eq-bar:nth-child(4) { animation: eqAnim 0.55s infinite alternate ease-in-out 0.05s; }
+#player.playing .eq-bar:nth-child(5) { animation: eqAnim 0.75s infinite alternate ease-in-out 0.15s; }
+#player.playing .eq-bar:nth-child(6) { animation: eqAnim 0.40s infinite alternate ease-in-out 0.25s; }
+#player.playing .eq-bar:nth-child(7) { animation: eqAnim 0.60s infinite alternate ease-in-out 0.12s; }
+
+@keyframes eqAnim {
+  0%   { height: 2px;  background: var(--accent); }
+  50%  { height: 10px; background: var(--gold); }
+  100% { height: 6px;  background: var(--accent2); }
+}
+
+/* Time & Scrubber */
 #player-time {
   display: flex;
   align-items: center;
-  gap: 5px;
-  font-size: 0.3rem;
+  gap: 6px;
+  font-size: 0.34rem;
   color: var(--accent);
+}
+#player-time span {
+  font-family: 'VT323', monospace;
+  font-size: 0.95rem;
+  color: var(--accent);
+  min-width: 26px;
 }
 #progress-bar {
   flex: 1;
   height: 6px;
-  background: #141f2e;
-  border: 1px solid #1e354f;
+  background: #091724;
+  border: 1px solid #163654;
   cursor: pointer;
   position: relative;
 }
@@ -401,56 +454,31 @@ a:hover {
   height: 100%;
   width: 0%;
   background: linear-gradient(90deg, var(--accent), var(--accent2));
-  transition: width 0.15s linear;
+  transition: width 0.1s linear;
 }
 
-/* Equalizer Visualizer */
-#equalizer {
-  display: flex;
-  align-items: flex-end;
-  gap: 2px;
-  height: 10px;
-  margin-top: 5px;
-}
-.eq-bar {
-  flex: 1;
-  background: var(--accent);
-  height: 2px;
-  transition: height 0.1s ease;
-}
-.playing .eq-bar:nth-child(1) { animation: eqPulse 0.4s infinite alternate ease-in-out; }
-.playing .eq-bar:nth-child(2) { animation: eqPulse 0.6s infinite alternate ease-in-out 0.1s; }
-.playing .eq-bar:nth-child(3) { animation: eqPulse 0.3s infinite alternate ease-in-out 0.2s; }
-.playing .eq-bar:nth-child(4) { animation: eqPulse 0.5s infinite alternate ease-in-out 0.15s; }
-.playing .eq-bar:nth-child(5) { animation: eqPulse 0.7s infinite alternate ease-in-out 0.05s; }
-
-@keyframes eqPulse {
-  0% { height: 2px; background: var(--accent); }
-  50% { height: 9px; background: var(--gold); }
-  100% { height: 6px; background: var(--accent2); }
-}
-
+/* Controls */
 #player-controls {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
   padding: 6px 8px;
-  background: #090918;
+  background: #090a16;
 }
 #player-controls button {
   background: var(--bg2);
   border: 1px solid var(--border-lit);
   color: var(--accent);
   font-family: 'VT323', monospace;
-  font-size: 1.1rem;
-  width: 30px;
-  height: 26px;
+  font-size: 1.15rem;
+  width: 32px;
+  height: 28px;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background 0.1s, color 0.1s, border-color 0.1s;
+  transition: background 0.1s, color 0.1s, border-color 0.1s, transform 0.05s;
   line-height: 1;
 }
 #player-controls button:hover, #player-controls button:focus {
@@ -459,9 +487,12 @@ a:hover {
   border-color: var(--accent);
   outline: none;
 }
+#player-controls button:active {
+  transform: translateY(1px);
+}
 #player-controls button#play-btn {
-  width: 36px;
-  background: #141424;
+  width: 42px;
+  background: #14172a;
   border-color: var(--accent);
   color: var(--gold);
 }
@@ -469,13 +500,12 @@ a:hover {
   background: var(--gold);
   color: #000;
 }
-.player-subinfo {
-  text-align: center;
-  font-size: 0.28rem;
-  color: var(--muted);
-  padding-bottom: 5px;
-  letter-spacing: 0.05em;
+#player.playing #player-controls button#play-btn {
+  border-color: var(--gold);
+  color: var(--gold);
+  box-shadow: 0 0 6px rgba(200, 169, 126, 0.3);
 }
+
 
 /* ===== MAIN CENTER COLUMN ===== */
 #main {
@@ -537,6 +567,76 @@ ul.interests li {
   font-size: 1rem;
 }
 ul.interests li:last-child { border-bottom: none; }
+
+/* ===== FAVORITE GAMES BOX ===== */
+.games-shelf {
+  padding: 10px 12px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 8px;
+}
+.game-card {
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  padding: 8px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  transition: all 0.15s ease;
+}
+.game-card:hover {
+  border-color: var(--accent);
+  background: #141829;
+  transform: translateY(-1px);
+}
+.game-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+  flex: 1;
+}
+.game-icon {
+  font-size: 1.15rem;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #080a14;
+  border: 1px solid var(--border-lit);
+  flex-shrink: 0;
+}
+.game-info {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  flex: 1;
+}
+.game-title {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 0.42rem;
+  color: var(--title-fg);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 2px;
+}
+.game-genre {
+  font-size: 0.88rem;
+  color: var(--gold);
+  line-height: 1.2;
+}
+.game-tag {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 0.28rem;
+  color: var(--accent2);
+  border: 1px solid var(--accent2);
+  padding: 2px 4px;
+  background: #180d1c;
+  flex-shrink: 0;
+}
 
 /* ===== DEVLOG & UPDATES ===== */
 .devlog-filters {
